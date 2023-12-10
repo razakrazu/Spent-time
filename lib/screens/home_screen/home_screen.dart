@@ -30,75 +30,118 @@ class Home_Screen extends StatelessWidget {
                         ),
                         
           ),
+          SizedBox(height: 30,),
+          Row(children: [
+            SizedBox(width: 10,),
+    Container(
+      height: 70,
+      width: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: Color.fromARGB(255, 103, 103, 102)
+      ),
+      child:Row(
+        children: [
+          SizedBox(width: 5,),
+          CircleAvatar(
+            radius: 30,
+            backgroundImage: AssetImage('lib/assets/jgvjvjh.jpeg'),
+          ),
+          SizedBox(width: 10,),
+          Text(
+                                      'Chennai',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                         color: Color.fromARGB(255, 0, 0, 0),
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+        ],
+      ),
+    )
+          ],),
 SizedBox(height: 30,),
          Expanded(
            child: Center(
-                child: GridView.builder(
-                  shrinkWrap: true,
-                  padding: const EdgeInsets.symmetric(vertical: 25),
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                   physics: const PageScrollPhysics(),
                   itemCount: 10,
                   itemBuilder: (context, index) {
                     
                   
-                    return Card(
-                      child: Container(
-                        height: 290,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20)),
-                        margin: EdgeInsets.all(5),
-                        padding: EdgeInsets.all(5),
-                        child: Stack(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Expanded(
-                                  child: Image.asset('lib/assets/ujo.jpg',
-                                  fit: BoxFit.fill,),
-                                  
-                                  
-                            
-                                ),
-                              
-                                Text(
-                                  'Dream villa',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      'Caliut',
+                    return 
+                  Column(
+                     crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+SizedBox(width: 20,),
+                   SizedBox( child:   Text(
+                                      'Normal Rooms',
                                       style: TextStyle(
+                                        fontSize: 18,
+                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 15,
+                                      ),
+                                    ),),
+                      Container(
+                        
+          margin: EdgeInsets.symmetric(horizontal: 10),
+                                      
+decoration:  BoxDecoration(
+      borderRadius: BorderRadius.circular(17),
+color: Color.fromARGB(255, 68, 65, 65),
+),
+
+                                      
+                                       child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                         Image(
+                                          
+                                          height: 150,
+                                          width: 240,
+                                          
+                                          image: AssetImage('lib/assets/klglff.jpg',),fit: BoxFit.fill,
+                                          ),
+                                         Text(
+                                      'Hotal:Dream villa',
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                         color: Colors.white,
+                                        fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                  ],
-                                ),
+                                    SizedBox(width: 10,),
+                               Text(
+                                          'Place:Calicut',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                            fontSize: 15,
+                                          ),
+                                        ),
+                                        
+                                        ],
+                                       ),  
+                                     
+                                      
+                                      
                                 
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
+                                    ),
+                    ],
+                  );
+
+                  
                   },
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 1.0,
-                    crossAxisSpacing: 2.0,
-                    mainAxisSpacing: 3,
-                    mainAxisExtent: 200,
-                    
-                  ),
+                  separatorBuilder: (context, index) {
+                    return SizedBox(height: 1,);
+                  }
+             
                 ),
               ),
          ),
         
-SizedBox(height: 30,),
+SizedBox(height: 10,),
 
         ],
       ),

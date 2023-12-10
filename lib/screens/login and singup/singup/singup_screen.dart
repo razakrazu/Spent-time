@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
+import 'package:spent_time/bottom_navigation/botton_navigation.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 
 
@@ -16,17 +17,19 @@ class Singup_Screen extends StatelessWidget {
       backgroundColor: Colors.black,
       body:
       // Obx(() {  return 
+      
         Stack(
           children: [
+            
             ClipPath(
-            // clipper: ArrowClipper(10, 100, Edge.RIGHT),
+            // clipper: ArrowClipper(400, 40, Edge.BOTTOM),
             // clipper: RoundedDiagonalPathClipper(),
                             // clipper: WaveClipperTwo(),
    clipper: DiagonalPathClipperTwo(),
       
 
               child: Container(
-                height: 400,
+                height: 350,
                
                 color: Color.fromARGB(255, 124, 2, 26),
            
@@ -37,13 +40,13 @@ class Singup_Screen extends StatelessWidget {
             
             
             Padding(
-            padding: const EdgeInsets.only(left: 30,right: 30,top: 120),
+            padding: const EdgeInsets.only(left: 20,right: 20,top: 120),
             child: ClipPath(
                
               child: Container(
             
                   height: 590,
-                  width: 320,
+                  width: 350,
                  decoration: BoxDecoration(
                 
                             border: Border.all(
@@ -124,12 +127,7 @@ class Singup_Screen extends StatelessWidget {
                                  child: ElevatedButton(onPressed: (){
                                   // clientController.addClient();
                                   // print(EmailController);
-                      //                Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => BottomNavigationExample(                    
-                          
-                      //   )),
-                      // );
+                          Get.to(BottomNavigationExample());
                           
                                  }, child: Text('Singup', style:const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),   style: ElevatedButton.styleFrom(
                                       primary: Color.fromARGB(255, 114, 114, 114),
