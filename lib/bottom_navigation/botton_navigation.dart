@@ -14,7 +14,7 @@ class BottomNavigationExample extends StatefulWidget {
 class _BottomNavigationExampleState extends State {
   int _selectedTab = 0;
 
-  List pages = const [
+  List pages =  [
     Home_Screen(),
     AddRooms(),
 
