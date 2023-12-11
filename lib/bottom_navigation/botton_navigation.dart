@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spent_time/screens/booking_screen/booking_screen.dart';
 import 'package:spent_time/screens/home_screen/home_screen.dart';
 
 
@@ -13,8 +14,10 @@ class BottomNavigationExample extends StatefulWidget {
 class _BottomNavigationExampleState extends State {
   int _selectedTab = 0;
 
-  List _pages = const [
+  List pages = const [
     Home_Screen(),
+    AddRooms(),
+
     
   
   
@@ -30,13 +33,13 @@ class _BottomNavigationExampleState extends State {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: _pages[_selectedTab],
+      body: pages[_selectedTab],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTab,
         onTap: (index) => _changeTab(index),
         selectedItemColor: const Color.fromARGB(255, 91, 91, 91),
         unselectedItemColor: Colors.grey,
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.bed_outlined), label: "BOOKINGS"),
           BottomNavigationBarItem(

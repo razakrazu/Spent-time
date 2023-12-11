@@ -7,7 +7,7 @@ import 'package:spent_time/screens/login%20and%20singup/singup/controller/contro
 
 
 class Singup_Screen extends StatelessWidget {
-   Singup_Screen({super.key});
+  const Singup_Screen({super.key});
 
 
   @override
@@ -31,11 +31,10 @@ class Singup_Screen extends StatelessWidget {
               child: Container(
                 height: 350,
                
-                color: Color.fromARGB(255, 124, 2, 26),
+                color:const Color.fromARGB(255, 124, 2, 26),
            
 
               ),
-              
             ),
             
             
@@ -50,13 +49,13 @@ class Singup_Screen extends StatelessWidget {
                  decoration: BoxDecoration(
                 
                             border: Border.all(
-                                color: Color.fromARGB(255, 233, 231, 231)),
+                                color: const Color.fromARGB(255, 233, 231, 231)),
                             borderRadius: BorderRadius.circular(50),
                           ),
                 child: 
                 ListView(
                   children: [
-                    SizedBox(height: 20,),
+                const    SizedBox(height: 20,),
                       Padding(
                                     padding: const EdgeInsets.all(20),
                                     child: TextFormField(
@@ -129,7 +128,7 @@ class Singup_Screen extends StatelessWidget {
                                   // print(EmailController);
                           Get.to(BottomNavigationExample());
                           
-                                 }, child: Text('Singup', style:const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),   style: ElevatedButton.styleFrom(
+                                 }, child:  Text('Singup', style:const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),   style: ElevatedButton.styleFrom(
                                       primary: Color.fromARGB(255, 114, 114, 114),
                                     ),
                                     ),

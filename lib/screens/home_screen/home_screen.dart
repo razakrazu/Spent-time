@@ -23,16 +23,16 @@ class Home_Screen extends StatelessWidget {
                               hintStyle: const TextStyle(
                                 color: Color.fromARGB(255, 183, 183, 183),
                               ),
-                              prefixIcon:IconButton(onPressed: (){}, icon: Icon(Icons.close,color: WhiteColor,))
+                              prefixIcon:IconButton(onPressed: (){}, icon:const Icon(Icons.close,color: WhiteColor,))
                              
                             ),
                           ),
                         ),
                         
           ),
-          SizedBox(height: 30,),
+    const      SizedBox(height: 30,),
           Row(children: [
-            SizedBox(width: 10,),
+   const         SizedBox(width: 10,),
     Container(
       height: 70,
       width: 200,
@@ -40,7 +40,7 @@ class Home_Screen extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
         color: Color.fromARGB(255, 103, 103, 102)
       ),
-      child:Row(
+      child:const Row(
         children: [
           SizedBox(width: 5,),
           CircleAvatar(
@@ -60,7 +60,7 @@ class Home_Screen extends StatelessWidget {
       ),
     )
           ],),
-SizedBox(height: 30,),
+const SizedBox(height: 30,),
          Expanded(
            child: Center(
                 child: ListView.separated(
@@ -74,8 +74,8 @@ SizedBox(height: 30,),
                   Column(
                      crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-SizedBox(width: 20,),
-                   SizedBox( child:   Text(
+const SizedBox(width: 20,),
+              const     SizedBox( child:   Text(
                                       'Normal Rooms',
                                       style: TextStyle(
                                         fontSize: 18,

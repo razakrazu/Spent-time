@@ -11,7 +11,7 @@ class Login_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    backgroundColor: Color.fromARGB(255, 0, 0, 0),
+    backgroundColor:const Color.fromARGB(255, 0, 0, 0),
       body: 
       //  Obx(() {  return
           Stack(
@@ -26,7 +26,7 @@ class Login_Screen extends StatelessWidget {
               child: Container(
                 height: 1000,
                
-                color: Color.fromARGB(255, 124, 2, 26),
+                color:const Color.fromARGB(255, 124, 2, 26),
            
 
               ),
@@ -49,7 +49,7 @@ class Login_Screen extends StatelessWidget {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         border: Border.all(
-                            color: Color.fromARGB(255, 255, 255, 255)),
+                            color:const Color.fromARGB(255, 255, 255, 255)),
                         borderRadius: BorderRadius.circular(50),
                       ),
                       height: 500,
@@ -123,7 +123,7 @@ class Login_Screen extends StatelessWidget {
                             padding: const EdgeInsets.only(top: 10),
                             child: TextButton(
                               onPressed: () {
-                                   Get.to(Singup_Screen());
+                                   Get.to(const Singup_Screen());
                               },
                               child: const Text('Create New Account',
                                   style: TextStyle(color: Colors.white)),
