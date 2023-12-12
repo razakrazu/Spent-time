@@ -24,10 +24,12 @@ class Singup_Screen extends StatelessWidget {
             ClipPath(
             // clipper: ArrowClipper(400, 40, Edge.BOTTOM),
             // clipper: RoundedDiagonalPathClipper(),
-                            // clipper: WaveClipperTwo(),
+  //                           // clipper: WaveClipperTwo(),
    clipper: DiagonalPathClipperTwo(),
+  
       
-    child: Container(
+    child:
+     Container(
                 height: 350,
                
                 color:const Color.fromARGB(255, 124, 2, 26),

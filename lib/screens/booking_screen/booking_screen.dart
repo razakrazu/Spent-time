@@ -58,7 +58,7 @@ bool istrue= false;
                         borderRadius: BorderRadius.circular(20),
                         image: DecorationImage(image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover,)
                       ),
-                      child: ClipRRect(
+                      child:const ClipRRect(
   borderRadius: BorderRadius.all(Radius.circular(10)),
   
 ),
@@ -70,154 +70,70 @@ bool istrue= false;
           
                 ),
           ),
-            Column(
-             crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-             const   SizedBox(height: 10,),
-          const      Padding(
-                  padding:  EdgeInsets.only(left: 10),
-                  child: Text('Property Name',style:  TextStyle(
-                                            color: Color.fromARGB(255, 200, 195, 195),
-                                          ),),
-                ),
-                       Padding(
-                                    padding: const EdgeInsets.only(left:10,right:  200),
-                                    child: TextFormField(
-                                      // controller: clientController.emailController,
-                                      decoration: InputDecoration(
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10),
+          Hight40,
+Row(
+  children: [
+   Expanded(
+      child:Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+     const     Padding(
+            padding:  EdgeInsets.only(left: 12,bottom: 5),
+            child: Text('Description',style:  TextStyle(
+                                              color: Color.fromARGB(255, 200, 195, 195),
+                                            ),),
+          ),
+          Padding(
+                                          padding: const EdgeInsets.only(left:10,right: 10),
+                                          child: TextFormField(
+                                            // controller: clientController.emailController,
+                                            decoration: InputDecoration(
+                                              border: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10),
+                                              ),
+                                              hintText: 'Enter property',
+                                              hintStyle: const TextStyle(
+                                                color: Color.fromARGB(255, 133, 133, 133),
+                                              ),
+                                            ),
+                                          ),
                                         ),
-                                        hintText: 'Enter property',
-                                        hintStyle: const TextStyle(
-                                          color: Color.fromARGB(255, 133, 133, 133),
+        ],
+      ) ,
+    ),
+    
+      Expanded(
+      child:Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+      const    Padding(
+            padding:  EdgeInsets.only(left: 12,bottom: 5),
+            child: Text('Description',style:  TextStyle(
+                                              color: Color.fromARGB(255, 200, 195, 195),
+                                            ),),
+          ),
+          Padding(
+                                          padding: const EdgeInsets.only(left:10,right: 10),
+                                          child: TextFormField(
+                                            // controller: clientController.emailController,
+                                            decoration: InputDecoration(
+                                              border: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10),
+                                              ),
+                                              hintText: 'Enter property',
+                                              hintStyle: const TextStyle(
+                                                color: Color.fromARGB(255, 133, 133, 133),
+                                              ),
+                                            ),
+                                          ),
                                         ),
-                                      ),
-                                    ),
-                                  ),
-                                      const   SizedBox(height: 10,),
-                                        const      Padding(
-                  padding:  EdgeInsets.only(left: 10),
-                  child: Text('Room Price',style:  TextStyle(
-                                            color: Color.fromARGB(255, 200, 195, 195),
-                                          ),),
-                ),
-                       Padding(
-                                    padding: const EdgeInsets.only(left:10,right:  200),
-                                    child: TextFormField(
-                                      // controller: clientController.emailController,
-                                      decoration: InputDecoration(
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        hintText: 'Room Rate',
-                                        hintStyle: const TextStyle(
-                                          color: Color.fromARGB(255, 133, 133, 133),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  
-                                   const   SizedBox(height: 10,),
-                                     Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
- const   SizedBox(height: 10,),
-                                        const      Padding(
-                  padding:  EdgeInsets.only(left: 10),
-                  child: Text('Room Price',style:  TextStyle(
-                                            color: Color.fromARGB(255, 200, 195, 195),
-                                          ),),
-                ),
-                       Padding(
-                                    padding: const EdgeInsets.only(left:10,right:  200),
-                                    child: TextFormField(
-                                      // controller: clientController.emailController,
-                                      decoration: InputDecoration(
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        hintText: 'Room Rate',
-                                        hintStyle: const TextStyle(
-                                          color: Color.fromARGB(255, 133, 133, 133),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                     ],),
+        ],
+      ) ,
+    ),
+  ],
+),
 
-
- const   SizedBox(height: 10,),
-                                        const      Padding(
-                  padding:  EdgeInsets.only(left: 10),
-                  child: Text('Room Price',style:  TextStyle(
-                                            color: Color.fromARGB(255, 200, 195, 195),
-                                          ),),
-                ),
-                       Padding(
-                                    padding: const EdgeInsets.only(left:10,right:  200),
-                                    child: TextFormField(
-                                      // controller: clientController.emailController,
-                                      decoration: InputDecoration(
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        hintText: 'Room Rate',
-                                        hintStyle: const TextStyle(
-                                          color: Color.fromARGB(255, 133, 133, 133),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-
-                                   const   SizedBox(height: 10,),
-                                        const      Padding(
-                  padding:  EdgeInsets.only(left: 10),
-                  child: Text('Room Price',style:  TextStyle(
-                                            color: Color.fromARGB(255, 200, 195, 195),
-                                          ),),
-                ),
-                       Padding(
-                                    padding: const EdgeInsets.only(left:10,right:  200),
-                                    child: TextFormField(
-                                      // controller: clientController.emailController,
-                                      decoration: InputDecoration(
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        hintText: 'Room Rate',
-                                        hintStyle: const TextStyle(
-                                          color: Color.fromARGB(255, 133, 133, 133),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                               const   SizedBox(height: 10,),
-                                        const      Padding(
-                  padding:  EdgeInsets.only(left: 10),
-                  child: Text('Room Price',style:  TextStyle(
-                                            color: Color.fromARGB(255, 200, 195, 195),
-                                          ),),
-                ),
-                       Padding(
-                                    padding: const EdgeInsets.only(left:10,right:  200),
-                                    child: TextFormField(
-                                      // controller: clientController.emailController,
-                                      decoration: InputDecoration(
-                                        border: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        hintText: '',
-                                        hintStyle: const TextStyle(
-                                          color: Color.fromARGB(255, 133, 133, 133),
-                                          
-                                        ),
-                                      ),
-                                    ),
-                                  ),    
-                          
-              ],
-            ),
+           
             SizedBox(height: 10,),
            Row(children: [
        Checkbox(value: istrue, onChanged:(value) => (){}, ),

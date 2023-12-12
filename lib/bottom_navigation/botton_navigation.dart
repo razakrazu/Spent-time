@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spent_time/screens/booking_screen/booking_screen.dart';
 import 'package:spent_time/screens/home_screen/home_screen.dart';
+import 'package:spent_time/screens/my_rooms/my_rooms.dart';
 
 
 class BottomNavigationExample extends StatefulWidget {
@@ -17,6 +18,7 @@ class _BottomNavigationExampleState extends State {
   List pages =  [
     Home_Screen(),
     AddRooms(),
+    MyRoomsScreen(),
 
     
   

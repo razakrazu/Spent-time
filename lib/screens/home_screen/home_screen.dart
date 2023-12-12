@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spent_time/core/color.dart';
+import 'package:spent_time/core/constants.dart';
 
 
 class Home_Screen extends StatelessWidget {
@@ -8,63 +9,72 @@ class Home_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text(
+                                      'HOME',
+                                      style: TextStyle(
+                                         color: Color.fromARGB(255, 255, 255, 255),
+                                        fontWeight: FontWeight.bold,
+                                        
+                                      ),
+                                    ),centerTitle: true,backgroundColor:    const Color.fromARGB(255, 124, 2, 26),),
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
       body: SafeArea(child:Column(
         children: [
-          Container(
-            child:     Padding(
-                          padding: const EdgeInsets.only(left: 30,right: 30,top: 50),
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(90),
-                              ),
-                              hintText: 'Search',
-                              hintStyle: const TextStyle(
-                                color: Color.fromARGB(255, 183, 183, 183),
-                              ),
-                              prefixIcon:IconButton(onPressed: (){}, icon:const Icon(Icons.close,color: WhiteColor,))
+          // Container(
+          //   child:     Padding(
+          //                 padding: const EdgeInsets.only(left: 30,right: 30,top: 50),
+          //                 child: TextFormField(
+          //                   decoration: InputDecoration(
+          //                     border: OutlineInputBorder(
+          //                       borderRadius: BorderRadius.circular(90),
+          //                     ),
+          //                     hintText: 'Search',
+          //                     hintStyle: const TextStyle(
+          //                       color: Color.fromARGB(255, 183, 183, 183),
+          //                     ),
+          //                     prefixIcon:IconButton(onPressed: (){}, icon:const Icon(Icons.close,color: WhiteColor,))
                              
-                            ),
-                          ),
-                        ),
+          //                   ),
+          //                 ),
+          //               ),
                         
-          ),
-    const      SizedBox(height: 30,),
-          Row(children: [
-   const         SizedBox(width: 10,),
-    Container(
-      height: 70,
-      width: 200,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color: Color.fromARGB(255, 103, 103, 102)
-      ),
-      child:const Row(
-        children: [
-          SizedBox(width: 5,),
-          CircleAvatar(
-            radius: 30,
-            backgroundImage: AssetImage('lib/assets/jgvjvjh.jpeg'),
-          ),
-          SizedBox(width: 10,),
-          Text(
-                                      'Chennai',
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                         color: Color.fromARGB(255, 0, 0, 0),
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-        ],
-      ),
-    )
-          ],),
+          // ),
+  //   const      SizedBox(height: 30,),
+  //         Row(children: [
+  //  const         SizedBox(width: 10,),
+  //   Container(
+  //     height: 70,
+  //     width: 200,
+  //     decoration: BoxDecoration(
+  //       borderRadius: BorderRadius.circular(30),
+  //       color: Color.fromARGB(255, 103, 103, 102)
+  //     ),
+  //     child:const Row(
+  //       children: [
+  //         SizedBox(width: 5,),
+  //         CircleAvatar(
+  //           radius: 30,
+  //           backgroundImage: AssetImage('lib/assets/jgvjvjh.jpeg'),
+  //         ),
+  //         SizedBox(width: 10,),
+  //         Text(
+  //                                     'Chennai',
+  //                                     style: TextStyle(
+  //                                       fontSize: 18,
+  //                                        color: Color.fromARGB(255, 0, 0, 0),
+  //                                       fontWeight: FontWeight.bold,
+  //                                     ),
+  //                                   ),
+  //       ],
+  //     ),
+  //   ),
+
+  //         ],),
 const SizedBox(height: 30,),
          Expanded(
            child: Center(
                 child: ListView.separated(
-                  scrollDirection: Axis.horizontal,
+                  scrollDirection: Axis.vertical,
                    physics: const PageScrollPhysics(),
                   itemCount: 10,
                   itemBuilder: (context, index) {
@@ -83,52 +93,97 @@ const SizedBox(width: 20,),
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),),
-                      Container(
-                        
-          margin: EdgeInsets.symmetric(horizontal: 10),
+                      Row(
+                        children: [
+                          Container(
+                            height: 200,
+                            width:170,
+          margin: EdgeInsets.symmetric(vertical: 10),
+                                          
+decoration:  BoxDecoration(
+  image: DecorationImage(image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover),
+      borderRadius: BorderRadius.circular(20),
+      
+
+),                              
+                                         
+           child:     Padding(
+             padding: const EdgeInsets.only(top: 140,left: 10),
+             child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                               
+                                               Text(
+                                            'Hotal:Dream villa',
+                                            style: TextStyle(
+                                              fontSize: 18,
+                                               color: Colors.white,
+                                           
+                                            ),
+                                          ),
+                                          SizedBox(width: 10,),
+                                     Text(
+                                                'Place:Calicut',
+                                                style: TextStyle(
+                                                
+                                                  color: Colors.white,
+                                                  fontSize: 15,
+                                                ),
+                                              ),
+                                              
+                                              ],
+                                             ),
+           ),                      
+                                          
+                                    
+                                        ),
+                                        Width30,
+                                        Container(
+                          height: 200,
+                            width:170,
+          margin: EdgeInsets.symmetric(vertical: 10),
                                       
 decoration:  BoxDecoration(
-      borderRadius: BorderRadius.circular(17),
-color: Color.fromARGB(255, 68, 65, 65),
-),
+  image: DecorationImage(image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover),
+      borderRadius: BorderRadius.circular(20),
+      
 
-                                      
-                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        children: [
-                                         Image(
-                                          
-                                          height: 150,
-                                          width: 240,
-                                          
-                                          image: AssetImage('lib/assets/klglff.jpg',),fit: BoxFit.fill,
-                                          ),
-                                         Text(
-                                      'Hotal:Dream villa',
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                         color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    SizedBox(width: 10,),
-                               Text(
-                                          'Place:Calicut',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            color: Colors.white,
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        
-                                        ],
-                                       ),  
+),                              
                                      
-                                      
+           child:     Padding(
+             padding: const EdgeInsets.only(top: 140,left: 10),
+             child: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                           
+                                           Text(
+                                        'Hotal:Dream villa',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                           color: Colors.white,
+                                       
+                                        ),
+                                      ),
+                                      SizedBox(width: 10,),
+                                 Text(
+                                            'Place:Calicut',
+                                            style: TextStyle(
+                                            
+                                              color: Colors.white,
+                                              fontSize: 15,
+                                            ),
+                                          ),
+                                          
+                                          ],
+                                         ),
+           ),                      
                                       
                                 
                                     ),
+                        ],
+                      ),
                     ],
+
                   );
 
                   
