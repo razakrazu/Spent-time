@@ -34,10 +34,7 @@ class Login_Screen extends StatelessWidget {
             ),
               Container(
                   
-            // decoration: const BoxDecoration(
-            //   image: DecorationImage(
-            //       image: AssetImage('lib/assets/djedjo.jpeg'), fit: BoxFit.cover),
-            // ),
+      
             
             child: Padding(
               padding: const EdgeInsets.only(),

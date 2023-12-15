@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 
 
@@ -9,7 +8,7 @@ class Home_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(
+      appBar: AppBar(title:const Text(
                                       'HOME',
                                       style: TextStyle(
                                          color: Color.fromARGB(255, 255, 255, 255),
@@ -84,17 +83,23 @@ const SizedBox(height: 30,),
                   Column(
                      crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-const SizedBox(width: 20,),
-              const     SizedBox( child:   Text(
-                                      'Normal Rooms',
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                         color: Colors.white,
-                                        fontWeight: FontWeight.bold,
+
+              const     SizedBox( child:   Padding(
+                padding: EdgeInsets.only(left: 15,),
+                child: Text(
+                                        'Normal Rooms',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                           color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
-                                    ),),
+              ),),
+                                  
                       Row(
                         children: [
+                          Width10,
+                          
                           Container(
                             height: 200,
                             width:170,
@@ -107,7 +112,7 @@ decoration:  BoxDecoration(
 
 ),                              
                                          
-           child:     Padding(
+           child:const     Padding(
              padding: const EdgeInsets.only(top: 140,left: 10),
              child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -137,7 +142,8 @@ decoration:  BoxDecoration(
                                           
                                     
                                         ),
-                                        Width30,
+                                        
+                                        Width20,
                                         Container(
                           height: 200,
                             width:170,
@@ -150,8 +156,8 @@ decoration:  BoxDecoration(
 
 ),                              
                                      
-           child:     Padding(
-             padding: const EdgeInsets.only(top: 140,left: 10),
+           child:    const Padding(
+             padding:  EdgeInsets.only(top: 140,left: 10),
              child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           children: [

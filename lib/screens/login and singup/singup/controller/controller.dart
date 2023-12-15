@@ -22,7 +22,7 @@ final db =FirebaseFirestore.instance;
       password: passwordController.text,
       
     );
-    await db.collection('contacts').add(clint.toJson()).whenComplete(() =>printInfo(info:'Contact Added'), );
+    await db.collection('contacts').add(clint.toJson()).whenComplete(() =>printInfo(info:'Contact Added'),);
     
   }
 }
