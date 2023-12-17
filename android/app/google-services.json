@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "544318459149",
-    "project_id": "spent-time-8a7fa",
-    "storage_bucket": "spent-time-8a7fa.appspot.com"
+    "project_number": "530815651440",
+    "project_id": "spent-time-9b0a1",
+    "storage_bucket": "spent-time-9b0a1.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:544318459149:android:3897e14a5e48ddea59b444",
+        "mobilesdk_app_id": "1:530815651440:android:dc4528386f7959cb6beeb5",
         "android_client_info": {
           "package_name": "com.example.spent_time"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBaRU6U7LZh-8gfObSEtS3pxQJOlYZM7sc"
+          "current_key": "AIzaSyD_Ns06Js9QLk8UI__oA5Vj1PPrpoD47Xo"
         }
       ],
       "services": {

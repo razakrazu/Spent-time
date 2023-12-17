@@ -18,9 +18,7 @@ class Login_Screen extends StatelessWidget {
             children: [
               ClipPath(
             clipper: ArrowClipper(400, 0, Edge.RIGHT),
-            // clipper: RoundedDiagonalPathClipper(),
-                            // clipper: WaveClipperTwo(),
-  //  clipper: DiagonalPathClipperTwo(),
+            
       
 
               child: Container(

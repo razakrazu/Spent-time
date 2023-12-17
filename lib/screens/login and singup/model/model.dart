@@ -1,13 +1,13 @@
 import 'dart:core';
 
-class SingModel{
+class SingupModel{
   String? name;
   String? email;
   String?  number;
   String? password;
-  SingModel({this.name,this.email,this.number,this.password});
+  SingupModel({this.name,this.email,this.number,this.password});
 
-SingModel.fromJson(Map<String,dynamic>json){
+SingupModel.fromJson(Map<String,dynamic>json){
 email = json['email'];
 password = json['password'];
 }

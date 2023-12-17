@@ -11,11 +11,11 @@ class ClientsController extends GetxController{
   TextEditingController  numberController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-var singuplist= RxList<SingModel>();
+var singuplist= RxList<SingupModel>();
 final db =FirebaseFirestore.instance;
 
   Future <void>addClient() async{
-    var clint = SingModel(
+    var clint = SingupModel(
       name: nameController.text,
       email: emailController.text,
       number:numberController.text,
@@ -24,5 +24,29 @@ final db =FirebaseFirestore.instance;
     );
     await db.collection('contacts').add(clint.toJson()).whenComplete(() =>printInfo(info:'Contact Added'),);
     
+  
   }
+//   void onSingup(){
+//     Future<String>createAccount(String email,String password) async{
+//       try{
+// await FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: password);
+// return "Account Created";
+//       }
+//       on FirebaseAuthException catch(ex){
+//         if(ex.code== "Weak password"){
+//           return "weak password";
+//         } else if(ex.code =="email -already in use"){
+//           return 'Email already exists Login please';
+//         }
+//         return "";
+//       }
+//       catch(ex){ 
+//        print(ex){
+//         return""; 
+        
+//        }
+//       }
+//     }
+//   }
+
 }

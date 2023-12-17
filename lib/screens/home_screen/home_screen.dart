@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:get/get.dart';
+import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 
 
@@ -8,17 +11,35 @@ class Home_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:const Text(
+      appBar: AppBar(leading: IconButton(onPressed: (){
+        Get.back();
+      }, icon: Icon(Icons.arrow_back,color: WhiteColor,)),
+        title:const Text(
                                       'HOME',
                                       style: TextStyle(
                                          color: Color.fromARGB(255, 255, 255, 255),
                                         fontWeight: FontWeight.bold,
                                         
                                       ),
-                                    ),centerTitle: true,backgroundColor:    const Color.fromARGB(255, 124, 2, 26),),
+                                    ),centerTitle: true,backgroundColor:  const Color.fromARGB(255, 124, 2, 26),
+ ),
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
       body: SafeArea(child:Column(
         children: [
+
+          ClipPath(
+clipper: WaveClipperOne(),
+  
+      
+    child:
+     Container(
+                height: 50,
+               
+                color:const Color.fromARGB(255, 124, 2, 26),
+ 
+              ),
+            ),
+            
           // Container(
           //   child:     Padding(
           //                 padding: const EdgeInsets.only(left: 30,right: 30,top: 50),
@@ -69,7 +90,6 @@ class Home_Screen extends StatelessWidget {
   //   ),
 
   //         ],),
-const SizedBox(height: 30,),
          Expanded(
            child: Center(
                 child: ListView.separated(

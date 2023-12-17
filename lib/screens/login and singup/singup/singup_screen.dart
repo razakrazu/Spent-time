@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
 import 'package:spent_time/bottom_navigation/botton_navigation.dart';
+import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 
 
 
@@ -14,6 +15,7 @@ class Singup_Screen extends StatelessWidget {
     // ClientsController clientController=Get.put(ClientsController());
     return Scaffold(
       backgroundColor: Colors.black,
+      
       body:
       // Obx(() {  return 
       
@@ -21,15 +23,18 @@ class Singup_Screen extends StatelessWidget {
           children: [
             
             ClipPath(
-            // clipper: ArrowClipper(400, 40, Edge.BOTTOM),
-            // clipper: RoundedDiagonalPathClipper(),
-  //                           // clipper: WaveClipperTwo(),
-   clipper: DiagonalPathClipperTwo(),
+           
+             
+                        clipper: DiagonalPathClipperTwo(),
+                          // clipper: DiagonalPathClipperOne(),
+            // clipper: MultiplePointedEdgeClipper(),
+
+
   
       
     child:
      Container(
-                height: 350,
+                height: 380,
                
                 color:const Color.fromARGB(255, 124, 2, 26),
  
@@ -124,7 +129,7 @@ class Singup_Screen extends StatelessWidget {
                                  padding: const EdgeInsets.only(left: 80,right: 80,top: 29),
                                  child: ElevatedButton(onPressed: (){
                                   // clientController.addClient();
-                                  // print(EmailController);
+                                  // print(clientController.emailController);
                           Get.to(BottomNavigationScreen());
                           
                                  }, child:  Text('Singup', style:const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),   style: ElevatedButton.styleFrom(
