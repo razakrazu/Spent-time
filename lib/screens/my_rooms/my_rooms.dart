@@ -15,7 +15,7 @@ class MyRoomsScreen extends StatelessWidget {
       backgroundColor: BlackColor,
       appBar: AppBar(leading: IconButton(onPressed: (){
         Get.back();
-      }, icon: Icon(Icons.arrow_back,color: WhiteColor,)),title: Text(
+      }, icon: const Icon(Icons.arrow_back,color: WhiteColor,)),title:const Text(
                                       'MY ROOMS',
                                       style: TextStyle(
                                          color: Color.fromARGB(255, 255, 255, 255),
@@ -47,7 +47,7 @@ class MyRoomsScreen extends StatelessWidget {
                      padding: const EdgeInsets.only(left: 5,right: 5),
                      child: Card(
                       
-                      color: Color.fromARGB(255, 209, 208, 208),
+                      color:const Color.fromARGB(255, 209, 208, 208),
                       child: Row(
                         children: [
                           Padding(
@@ -56,7 +56,7 @@ class MyRoomsScreen extends StatelessWidget {
                             height: 100,
                               width: 130,
                             decoration:  BoxDecoration(
-                            image: DecorationImage(
+                            image:const DecorationImage(
                               
                               image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover),
                                 borderRadius: BorderRadius.circular(20),
@@ -67,7 +67,7 @@ class MyRoomsScreen extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(right: 30),
-                            child: Container(
+                            child:  Container(
                               height: 120,
                               width: 150,
                               
@@ -75,9 +75,9 @@ class MyRoomsScreen extends StatelessWidget {
                                 
                                
                                 onTap: ()=>
-                                Get.to(RoomDetails()),
-                                title: Padding(
-                                  padding: const EdgeInsets.only(top: 10),
+                                Get.to(const RoomDetails()),
+                                title:const Padding(
+                                  padding:  EdgeInsets.only(top: 10),
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [

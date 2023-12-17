@@ -49,7 +49,7 @@ class RoomDetails extends StatelessWidget {
                    child: GridView.builder(  
                            scrollDirection: Axis.horizontal,
                           itemCount: 6,  
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(  
+                          gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(  
                               crossAxisCount: 1,  
                               crossAxisSpacing: 1,  
                               mainAxisSpacing: 10,  
@@ -59,7 +59,7 @@ class RoomDetails extends StatelessWidget {
                               width: 150,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                image: DecorationImage(
+                                image:const DecorationImage(
           
                                   
                                   image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover,)

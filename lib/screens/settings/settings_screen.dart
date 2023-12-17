@@ -14,15 +14,15 @@ class SettingsScreen extends StatelessWidget {
       backgroundColor: BlackColor,
 appBar: AppBar(leading: IconButton(onPressed: (){
         Get.back();
-      }, icon: Icon(Icons.arrow_back,color: WhiteColor,)),
-      title: Text(
+      }, icon:const Icon(Icons.arrow_back,color: WhiteColor,)),
+      title:const Text(
        'SETTINGS',
              style: TextStyle(
                         color: Color.fromARGB(255, 255, 255, 255),
                    fontWeight: FontWeight.bold,
              ),                 
                       ),
-    centerTitle: true,backgroundColor:    const Color.fromARGB(255, 124, 2, 26),),  
+    centerTitle: true,backgroundColor:    Color.fromARGB(255, 241, 231, 233),),  
     body: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -44,7 +44,7 @@ appBar: AppBar(leading: IconButton(onPressed: (){
          child: Column(
           children: [
              Hight40,
-          TextButton.icon(onPressed: (){}, icon: Icon(Icons.privacy_tip,color: WhiteColor,size: 30,), label:  Text(
+          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.privacy_tip,color: WhiteColor,size: 30,), label:const  Text(
          'About',
                style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
@@ -53,7 +53,7 @@ appBar: AppBar(leading: IconButton(onPressed: (){
                ),                 
                         ),),
                         Hight10,
-                          TextButton.icon(onPressed: (){}, icon: Icon(Icons.restart_alt_rounded,color: WhiteColor,size: 30,), label:  Text(
+                          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.restart_alt_rounded,color: WhiteColor,size: 30,), label: const Text(
          'Reset',
                style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
@@ -62,7 +62,7 @@ appBar: AppBar(leading: IconButton(onPressed: (){
                ),                 
                         ),),
                         Hight10,
-                          TextButton.icon(onPressed: (){}, icon: Icon(Icons.share,color: WhiteColor,size: 30,), label:  Text(
+                          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.share,color: WhiteColor,size: 30,), label:const  Text(
          'Share',
                style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
@@ -72,7 +72,7 @@ appBar: AppBar(leading: IconButton(onPressed: (){
                         ),),
 
                         Hight10,
-                               TextButton.icon(onPressed: (){}, icon: Icon(Icons.share,color: WhiteColor,size: 30,), label:  Text(
+                               TextButton.icon(onPressed: (){}, icon:const Icon(Icons.share,color: WhiteColor,size: 30,), label: const Text(
          'Share',
                style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
@@ -82,7 +82,7 @@ appBar: AppBar(leading: IconButton(onPressed: (){
                         ),),
                                                 Hight10,
 
-                          TextButton.icon(onPressed: (){}, icon: Icon(Icons.privacy_tip,color: WhiteColor,size: 30,), label:  Text(
+                          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.privacy_tip,color: WhiteColor,size: 30,), label:const  Text(
          'privacy',
                style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),

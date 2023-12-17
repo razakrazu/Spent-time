@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
 import 'package:spent_time/bottom_navigation/botton_navigation.dart';
-import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 
 
 
@@ -26,8 +25,6 @@ class Singup_Screen extends StatelessWidget {
            
              
                         clipper: DiagonalPathClipperTwo(),
-                          // clipper: DiagonalPathClipperOne(),
-            // clipper: MultiplePointedEdgeClipper(),
 
 
   

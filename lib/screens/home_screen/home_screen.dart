@@ -13,7 +13,7 @@ class Home_Screen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(leading: IconButton(onPressed: (){
         Get.back();
-      }, icon: Icon(Icons.arrow_back,color: WhiteColor,)),
+      }, icon:const Icon(Icons.arrow_back,color: WhiteColor,)),
         title:const Text(
                                       'HOME',
                                       style: TextStyle(
@@ -23,7 +23,7 @@ class Home_Screen extends StatelessWidget {
                                       ),
                                     ),centerTitle: true,backgroundColor:  const Color.fromARGB(255, 124, 2, 26),
  ),
-      backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      backgroundColor:const Color.fromARGB(255, 0, 0, 0),
       body: SafeArea(child:Column(
         children: [
 
@@ -123,17 +123,17 @@ clipper: WaveClipperOne(),
                           Container(
                             height: 200,
                             width:170,
-          margin: EdgeInsets.symmetric(vertical: 10),
+          margin:const EdgeInsets.symmetric(vertical: 10),
                                           
 decoration:  BoxDecoration(
-  image: DecorationImage(image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover),
+  image:const DecorationImage(image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover),
       borderRadius: BorderRadius.circular(20),
       
 
 ),                              
                                          
            child:const     Padding(
-             padding: const EdgeInsets.only(top: 140,left: 10),
+             padding:  EdgeInsets.only(top: 140,left: 10),
              child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
                                               children: [
@@ -170,7 +170,7 @@ decoration:  BoxDecoration(
           margin: EdgeInsets.symmetric(vertical: 10),
                                       
 decoration:  BoxDecoration(
-  image: DecorationImage(image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover),
+  image:const DecorationImage(image:  AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover),
       borderRadius: BorderRadius.circular(20),
       
 
@@ -215,14 +215,14 @@ decoration:  BoxDecoration(
                   
                   },
                   separatorBuilder: (context, index) {
-                    return SizedBox(height: 1,);
+                    return const SizedBox(height: 1,);
                   }
              
                 ),
               ),
          ),
         
-SizedBox(height: 10,),
+const  SizedBox(height: 10,),
 
         ],
       ),
