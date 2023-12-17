@@ -22,7 +22,7 @@ appBar: AppBar(leading: IconButton(onPressed: (){
                    fontWeight: FontWeight.bold,
              ),                 
                       ),
-    centerTitle: true,backgroundColor:    Color.fromARGB(255, 241, 231, 233),),  
+    centerTitle: true,backgroundColor:    const Color.fromARGB(255, 124, 2, 26),),  
     body: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -30,7 +30,7 @@ appBar: AppBar(leading: IconButton(onPressed: (){
             
    clipper: DiagonalPathClipperTwo(),
   
-      
+      // jdkkjhfjlalsk
     child:
      Container(
                 height: 150,
@@ -72,7 +72,7 @@ appBar: AppBar(leading: IconButton(onPressed: (){
                         ),),
 
                         Hight10,
-                               TextButton.icon(onPressed: (){}, icon:const Icon(Icons.share,color: WhiteColor,size: 30,), label: const Text(
+                               TextButton.icon(onPressed: (){}, icon:const Icon(Icons.notifications_paused,color: WhiteColor,size: 30,), label: const Text(
          'Share',
                style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
