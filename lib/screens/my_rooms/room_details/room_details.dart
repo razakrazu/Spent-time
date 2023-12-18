@@ -38,46 +38,80 @@ class RoomDetails extends StatelessWidget {
               ),
             ),
           Expanded(
-            child: ListView(
-              children: [
-                 Container(
-                  
-                   height: 250,
-                   
-                   
-               
-                   child: GridView.builder(  
-                           scrollDirection: Axis.horizontal,
-                          itemCount: 6,  
-                          gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(  
-                              crossAxisCount: 1,  
-                              crossAxisSpacing: 1,  
-                              mainAxisSpacing: 10,  
-                          ),  
-                          itemBuilder: (BuildContext context, int index){  
-                            return Container(
-                              width: 150,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                image:const DecorationImage(
-          
+            child: SingleChildScrollView(
+child:                 Column(
+  children: [
+        Container(
+    
+                      
+    
+                       height: 400,
+    width: double.infinity,
+                      
+    
+                       child: GridView.builder(  
+    
+                               scrollDirection: Axis.horizontal,
+    
+                              itemCount: 6,  
+    
+                              gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(  
+    
+                                  crossAxisCount: 1,  
+    
+                                  crossAxisSpacing: 1,  
+    
+                                  mainAxisSpacing: 10,  
+    
+                              ),  
+    
+                              itemBuilder: (BuildContext context, int index){  
+    
+                                return Container(
+    
+                                  width: double.infinity,
+    
+                                  decoration: BoxDecoration(
+    
+                                    borderRadius: BorderRadius.circular(20),
+    
+                                    image:const DecorationImage(
+    
+              
+    
+                                      
+    
+                                      image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover,)
+    
+                                  ),
+    
+                                 
+    
                                   
-                                  image: AssetImage('lib/assets/klglff.jpg'),fit: BoxFit.cover,)
-                              ),
-                             
-                              
-                            );
-                             
-                          },  
-                        ),
-                 ),
-                 Hight20,
-                 Container(
-                  height: 600,
+    
+                                );
+    
+                                 
+    
+                              },  
+    
+                            ),
+    
+                     ),
+                     Hight20,
+                     Container(height: 500,
+                     width: 370,
+                     decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(20),
+                                          color: const Color.fromARGB(255, 109, 108, 108),
+
+                     ),
+                     ),
+  ],
+),
                 
-                  color: Colors.grey,)
                 
-              ],
+              
             ),
           ),
         ],
