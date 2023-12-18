@@ -100,7 +100,7 @@ child:                 Column(
                      ),
                      Hight20,
                      Container(height: 500,
-                     width: 370,
+                     width: 30,
                      decoration: BoxDecoration(
                      borderRadius: BorderRadius.circular(20),
                                           color: const Color.fromARGB(255, 109, 108, 108),
@@ -110,7 +110,7 @@ child:                 Column(
   ],
 ),
                 
-                
+                //shammad 
               
             ),
           ),
