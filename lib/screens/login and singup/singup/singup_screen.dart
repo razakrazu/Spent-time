@@ -90,7 +90,7 @@ class Singup_Screen extends StatelessWidget {
                                    child: ElevatedButton(onPressed: (){
                                     // clientController.addClient();
                                     // clientController.singup();
-                            // Get.to(BottomNavigationScreen());
+                            Get.to(BottomNavigationScreen());
                             if(formkey.currentState!.validate()){
                               ClientSignUpController.instance.registerUser(clientController.emailController.text.trim(), clientController.passwordController.text.trim());
                             }

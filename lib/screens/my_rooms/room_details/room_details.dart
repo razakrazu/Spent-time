@@ -45,8 +45,8 @@ class RoomDetails extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    height: 400,
-                    width: double.infinity,
+                    height:double.infinity,
+                    width:double.infinity,
                     child: GridView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: 6,
@@ -58,11 +58,11 @@ class RoomDetails extends StatelessWidget {
                       ),
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
-                          width: double.infinity,
+                          
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               image: const DecorationImage(
-                                image: AssetImage('lib/assets/klglff.jpg'),
+                                image: AssetImage( 'lib/assets/klglff.jpg',),
                                 fit: BoxFit.cover,
                               )),
                         );
@@ -72,7 +72,7 @@ class RoomDetails extends StatelessWidget {
                   Hight20,
                   Container(
                     height: 500,
-                    width: 30,
+                    width: 350,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: const Color.fromARGB(255, 109, 108, 108),

@@ -22,14 +22,14 @@ void onReady(){
 }
 
   setInitialScreen(User? user) {
-    user == null? Get.offAll(()=>Login_Screen()):Get.offAll(()=>Singup_Screen());
+    user == null? Get.offAll(()=>Home_Screen()):Get.offAll(()=>Singup_Screen());
   }
 
     Future<void>createUserWithEmailAndPassword(String emailController,String passwordController) async{
       try{
 await auth.createUserWithEmailAndPassword(
   email: emailController, password: passwordController);
-  firebaseUser.value!= null? Get.offAll(()=>Singup_Screen()):Get.offAll(()=>Login_Screen());
+  firebaseUser.value!= null? Get.offAll(()=>Singup_Screen()):Get.offAll(()=>Home_Screen());
 
       } on FirebaseAuthException catch(e){
         final ex =SignUpWithEmailAndPasswordFailure.code(e.code);
