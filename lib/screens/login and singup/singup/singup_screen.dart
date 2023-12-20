@@ -13,7 +13,8 @@ class Singup_Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ClientsController clientController = Get.put(ClientsController());
+   final   clientController = Get.put(ClientSignUpController());
+   final formkey =GlobalKey<FormState>();
     return Scaffold(
       backgroundColor: Colors.black,
       
@@ -51,50 +52,56 @@ class Singup_Screen extends StatelessWidget {
                             borderRadius: BorderRadius.circular(50),
                           ),
                 child: 
-                ListView(
-                  children: [
-                const    SizedBox(height: 20,),
-                      Padding(
-                                    padding: const EdgeInsets.all(20),
-                                    child: Mytextformfieds(
-                                      labal: 'Name', 
-                                      icons: Icons.person,
-                                       onChanged: clientController.nameController,),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(20),
-                                    child: Mytextformfieds(
-                                      labal: 'Email', 
-                                      icons: Icons.mail_outline,
-                                       onChanged: clientController.emailController,),
-                                  ),
-                                   Padding(
-                                    padding: const EdgeInsets.all(20),
-                                    child: Mytextformfieds(
-                                      labal: 'Number', 
-                                      icons: Icons.call,
-                                       onChanged: clientController.numberController,),
-                                  ),
-                                      Padding(
-                                    padding: const EdgeInsets.all(20),
-                                    child: Mytextformfieds(
-                                      labal: 'password', 
-                                      icons: Icons.lock,
-                                       onChanged: clientController.passwordController,),
-                                  ),
-                               Padding(
-                                 padding: const EdgeInsets.only(left: 80,right: 80,top: 29),
-                                 child: ElevatedButton(onPressed: (){
-                                  // clientController.addClient();
-                                  // clientController.singup();
-                          Get.to(BottomNavigationScreen());
-                          
-                                 }, child:  Text('SING UP', style:const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),   style: ElevatedButton.styleFrom(
-                                      primary: Color.fromARGB(255, 114, 114, 114),
+                Form(
+                  key: formkey,
+                  child: ListView(
+                    children: [
+                  const    SizedBox(height: 20,),
+                        Padding(
+                                      padding: const EdgeInsets.all(20),
+                                      child: Mytextformfieds(
+                                        labal: 'Name', 
+                                        icons: Icons.person,
+                                         onChanged: clientController.nameController,),
                                     ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(20),
+                                      child: Mytextformfieds(
+                                        labal: 'Email', 
+                                        icons: Icons.mail_outline,
+                                         onChanged: clientController.emailController,),
                                     ),
-                               ),   
-                  ],
+                                     Padding(
+                                      padding: const EdgeInsets.all(20),
+                                      child: Mytextformfieds(
+                                        labal: 'Number', 
+                                        icons: Icons.call,
+                                         onChanged: clientController.numberController,),
+                                    ),
+                                        Padding(
+                                      padding: const EdgeInsets.all(20),
+                                      child: Mytextformfieds(
+                                        labal: 'password', 
+                                        icons: Icons.lock,
+                                         onChanged: clientController.passwordController,),
+                                    ),
+                                 Padding(
+                                   padding: const EdgeInsets.only(left: 80,right: 80,top: 29),
+                                   child: ElevatedButton(onPressed: (){
+                                    // clientController.addClient();
+                                    // clientController.singup();
+                            // Get.to(BottomNavigationScreen());
+                            if(formkey.currentState!.validate()){
+                              ClientSignUpController.instance.registerUser(clientController.emailController.text.trim(), clientController.passwordController.text.trim());
+                            }
+                            
+                                   }, child:  Text('SING UP', style:const TextStyle(color: Color.fromARGB(255, 255, 255, 255)),),   style: ElevatedButton.styleFrom(
+                                        primary: Color.fromARGB(255, 114, 114, 114),
+                                      ),
+                                      ),
+                                 ),   
+                    ],
+                  ),
                 ),
               ),
             ),
