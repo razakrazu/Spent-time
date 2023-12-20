@@ -1,13 +1,14 @@
 
 
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_rx/src/rx_types/rx_types.dart';
+// import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
-import 'package:spent_time/screens/login%20and%20singup/model/model.dart';
+import 'package:spent_time/screens/login%20and%20singup/singup/authentication_controller/authentication_cantroller.dart';
+// import 'package:spent_time/screens/login%20and%20singup/model/model.dart';
 
 class ClientSignUpController extends GetxController{
 
@@ -19,7 +20,7 @@ class ClientSignUpController extends GetxController{
   TextEditingController passwordController = TextEditingController();
 
 void registerUser(String emailController,String passwordController){
-
+AuthenticationRepositry.instance.createUserWithEmailAndPassword(emailController, passwordController);
 }
 
 // var singuplist= RxList<SingupModel>();
