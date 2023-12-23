@@ -44,7 +44,17 @@ appBar: AppBar(leading: IconButton(onPressed: (){
          child: Column(
           children: [
              Hight40,
-          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.privacy_tip,color: WhiteColor,size: 30,), label:const  Text(
+                               TextButton.icon(onPressed: (){}, icon:const Icon(Icons.power_settings_new_outlined,color: WhiteColor,size: 30,), label: const Text(
+         'Logout',
+               style: TextStyle(
+                          color: Color.fromARGB(255, 255, 255, 255),
+                          fontSize: 20,
+                     fontWeight: FontWeight.bold,
+               ),                 
+                        ),),
+                                       Hight10,
+
+          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.info_outline,color: WhiteColor,size: 30,), label:const  Text(
          'About',
                style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),
@@ -71,18 +81,10 @@ appBar: AppBar(leading: IconButton(onPressed: (){
                ),                 
                         ),),
 
-                        Hight10,
-                               TextButton.icon(onPressed: (){}, icon:const Icon(Icons.notifications_paused,color: WhiteColor,size: 30,), label: const Text(
-         'Share',
-               style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 20,
-                     fontWeight: FontWeight.bold,
-               ),                 
-                        ),),
+                      
                                                 Hight10,
 
-                          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.privacy_tip,color: WhiteColor,size: 30,), label:const  Text(
+                          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.privacy_tip_outlined,color: WhiteColor,size: 30,), label:const  Text(
          'privacy',
                style: TextStyle(
                           color: Color.fromARGB(255, 255, 255, 255),

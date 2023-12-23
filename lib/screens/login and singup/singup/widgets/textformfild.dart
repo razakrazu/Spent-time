@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spent_time/core/color.dart';
 
 class Mytextformfieds extends StatelessWidget {
   final String labal;
@@ -14,6 +15,7 @@ class Mytextformfieds extends StatelessWidget {
      controller: onChanged,
       decoration: InputDecoration(
         border: OutlineInputBorder(
+          
           borderRadius: BorderRadius.circular(90),
         ),
         hintText: labal,
@@ -22,6 +24,7 @@ class Mytextformfieds extends StatelessWidget {
         ),
         prefixIcon:  Icon(icons,color: const Color.fromARGB(255, 200, 200, 200),),
       ),
+      style: TextStyle(color: WhiteColor),
     );
   }
 }

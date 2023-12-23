@@ -1,10 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:spent_time/bottom_navigation/botton_navigation.dart';
 import 'package:spent_time/screens/home_screen/home_screen.dart';
 import 'package:spent_time/screens/login%20and%20singup/login_screen.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/authentication_controller/exption_screen.dart';
-import 'package:spent_time/screens/login%20and%20singup/singup/singup_screen.dart';
 
 class AuthenticationRepositry extends GetxController{
   static AuthenticationRepositry get instance => Get.find();
@@ -22,14 +21,14 @@ void onReady(){
 }
 
   setInitialScreen(User? user) {
-    user == null? Get.offAll(()=>Home_Screen()):Get.offAll(()=>Singup_Screen());
+    user == null? Get.offAll(()=>Login_Screen()):Get.offAll(()=>Login_Screen());
   }
 
     Future<void>createUserWithEmailAndPassword(String emailController,String passwordController) async{
       try{
 await auth.createUserWithEmailAndPassword(
   email: emailController, password: passwordController);
-  firebaseUser.value!= null? Get.offAll(()=>Singup_Screen()):Get.offAll(()=>Home_Screen());
+  firebaseUser.value!= null? Get.offAll(()=>Login_Screen()):Get.offAll(()=>Login_Screen());
 
       } on FirebaseAuthException catch(e){
         final ex =SignUpWithEmailAndPasswordFailure.code(e.code);

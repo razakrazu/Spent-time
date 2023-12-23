@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
+import 'package:spent_time/core/color.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/singup_screen.dart';
 
 
@@ -67,6 +68,7 @@ class Login_Screen extends StatelessWidget {
                                 ),
                                 prefixIcon: const Icon(Icons.mail_outline,color: Color.fromARGB(255, 200, 200, 200),),
                               ),
+                              style: TextStyle(color: WhiteColor),
                             ),
                           ),
                           Padding(
@@ -85,6 +87,7 @@ class Login_Screen extends StatelessWidget {
                                     prefixIcon: const Icon(Icons.lock_outlined,color: Color.fromARGB(255, 200, 200, 200),),
           
                               ),
+                              style: TextStyle(color: WhiteColor),
                             ),
                           ),
                           Padding(

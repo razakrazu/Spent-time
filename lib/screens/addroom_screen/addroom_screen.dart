@@ -77,7 +77,6 @@ bool istrue= false;
         ),
                         
                       );
-                      // Image.network(images[index]);  
                     },  
                   ),
             
@@ -308,7 +307,7 @@ bool istrue= false;
                                             ),),
                                             Width30, 
                                              Checkbox(value: istrue, onChanged:(value) => (){}, ),
-               const Text('Tv',style:  TextStyle(
+               const Text('Wifi',style:  TextStyle(
                                               color: Color.fromARGB(255, 200, 195, 195),
                                             ),), 
                                             Width10, 
@@ -329,7 +328,7 @@ bool istrue= false;
                                             ),),
                                             Width20, 
                                              Checkbox(value: istrue, onChanged:(value) => (){}, ),
-               const Text('Heater',style:  TextStyle(
+               const Text('Tv',style:  TextStyle(
                                               color: Color.fromARGB(255, 200, 195, 195),
                                             ),), 
                                             Width10, 
@@ -401,10 +400,15 @@ bool istrue= false;
                                     ),
                                     Hight10,
                                     Padding(
-                                      padding: const EdgeInsets.only(left: 60,right: 60),
-                                      child: ElevatedButton(onPressed: (){}, child:const Text('Submit',style:  TextStyle(
+                                      padding: const EdgeInsets.only(left: 110,right: 110),
+                                      child: ElevatedButton(  onPressed: (){}, child:const Text('Submit',style:  TextStyle(
                                                 color: Color.fromARGB(255, 0, 0, 0),
-                                              ),),),
+                                                
+                                              ),),
+                                               style: ElevatedButton.styleFrom(
+                                        primary: Color.fromARGB(255, 171, 169, 169),
+                                      ),
+                                              ),
                                     ), 
         
           ],

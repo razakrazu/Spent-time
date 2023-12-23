@@ -19,9 +19,10 @@ class _BottomNavigationExampleState extends State {
   List pages =  [
     
     Home_Screen(),
+       AddRooms(),
    MyRoomsScreen(),
-    AddRooms(),
-    Container(),
+ 
+  
     SettingsScreen(),
    
 
@@ -48,11 +49,12 @@ class _BottomNavigationExampleState extends State {
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.bed_outlined), label: "MyRoom"),
-          BottomNavigationBarItem(
+           BottomNavigationBarItem(
               icon: Icon(Icons.add_circle_outline_outlined), label: "ADD"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person), label: "Profile"),
+          BottomNavigationBarItem(icon: Icon(Icons.bed_outlined), label: "MyRoom"),
+         
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.person), label: "Profile"),
           BottomNavigationBarItem(
             
               icon: Icon(Icons.settings), label: "Settings"),
