@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:spent_time/bottom_navigation/botton_navigation.dart';
-import 'package:spent_time/screens/home_screen/home_screen.dart';
 import 'package:spent_time/screens/login%20and%20singup/login_screen.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/authentication_controller/exption_screen.dart';
 

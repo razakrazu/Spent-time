@@ -116,19 +116,22 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ),
                 Hight10,
-                TextButton.icon(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.privacy_tip_outlined,
-                    color: WhiteColor,
-                    size: 30,
-                  ),
-                  label: const Text(
-                    'privacy',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                Padding(
+                  padding: const EdgeInsets.only(left: 8),
+                  child: TextButton.icon(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.privacy_tip_outlined,
+                      color: WhiteColor,
+                      size: 30,
+                    ),
+                    label: const Text(
+                      'privacy',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),

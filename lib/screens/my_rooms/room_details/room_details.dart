@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 
@@ -17,7 +16,7 @@ class RoomDetails extends StatelessWidget {
             onPressed: () {
               Get.back();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back,
               color: WhiteColor,
             )),
@@ -79,12 +78,12 @@ class RoomDetails extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       color: const Color.fromARGB(255, 109, 108, 108),
                     ),
-                    child: Column(
+                    child:const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 30),
-                          child: Text(
+                          padding:  EdgeInsets.only(left: 10, top: 30),
+                          child:  Text(
                             'HotalName : Dream villa',
                             style: TextStyle(
                               fontSize: 18,
@@ -93,7 +92,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'Bed : double ',
                             style: TextStyle(
@@ -103,7 +102,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'Ac : nonAc ',
                             style: TextStyle(
@@ -113,7 +112,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'Tv : yes ',
                             style: TextStyle(
@@ -123,7 +122,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'heater : yes ',
                             style: TextStyle(
@@ -133,7 +132,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'Food : yes ',
                             style: TextStyle(
@@ -143,7 +142,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'swimingpool : yes ',
                             style: TextStyle(
@@ -153,7 +152,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'Wifi : yes ',
                             style: TextStyle(
@@ -173,7 +172,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'parking : yes ',
                             style: TextStyle(
@@ -183,7 +182,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'Workout : yes ',
                             style: TextStyle(
@@ -193,7 +192,7 @@ class RoomDetails extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          padding:  EdgeInsets.only(left: 10, top: 10),
                           child: Text(
                             'jogging : yes ',
                             style: TextStyle(
