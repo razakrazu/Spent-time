@@ -50,7 +50,12 @@ class Singup_Screen extends StatelessWidget {
                           labal: 'Name',
                           icons: Icons.person,
                           onChanged: clientController.nameController,
+                          validation: 
+                          (value)=>clientController.nameController.text.isEmpty
+                          ?'please enter your name'
+                          : null,
                         ),
+                        
                       ),
                       Padding(
                         padding: const EdgeInsets.all(20),
@@ -58,6 +63,9 @@ class Singup_Screen extends StatelessWidget {
                           labal: 'Email',
                           icons: Icons.mail_outline,
                           onChanged: clientController.emailController,
+                          validation:(value)=> clientController.emailController.text.isEmpty
+                          ?'please Enter email'
+                          :null,
                         ),
                       ),
                       Padding(
@@ -66,6 +74,9 @@ class Singup_Screen extends StatelessWidget {
                           labal: 'Number',
                           icons: Icons.call,
                           onChanged: clientController.numberController,
+                          validation: (value)=>clientController.nameController.text.isEmpty
+                          ?'please enter number'
+                          :null,
                         ),
                       ),
                       Padding(
@@ -74,6 +85,9 @@ class Singup_Screen extends StatelessWidget {
                           labal: 'password',
                           icons: Icons.lock,
                           onChanged: clientController.passwordController,
+                          validation: (value)=>clientController.passwordController.text.isEmpty
+                          ?'please enter password'
+                          :null,
                         ),
                       ),
                       Padding(

@@ -37,7 +37,6 @@ class SettingsScreen extends StatelessWidget {
           ClipPath(
             clipper: DiagonalPathClipperTwo(),
 
-            // jdkkjhfjlalsk
             child: Container(
               height: 150,
               color: const Color.fromARGB(255, 124, 2, 26),
