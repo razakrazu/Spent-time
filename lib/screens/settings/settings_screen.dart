@@ -12,93 +12,132 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: BlackColor,
-appBar: AppBar(leading: IconButton(onPressed: (){
-        Get.back();
-      }, icon:const Icon(Icons.arrow_back,color: WhiteColor,)),
-      title:const Text(
-       'SETTINGS',
-             style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                   fontWeight: FontWeight.bold,
-             ),                 
-                      ),
-    centerTitle: true,backgroundColor:    const Color.fromARGB(255, 124, 2, 26),),  
-    body: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-      ClipPath(
-            
-   clipper: DiagonalPathClipperTwo(),
-  
-      // jdkkjhfjlalsk
-    child:
-     Container(
-                height: 150,
-               
-                color:const Color.fromARGB(255, 124, 2, 26),
- 
-              ),
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Get.back();
+            },
+            icon: const Icon(
+              Icons.arrow_back,
+              color: WhiteColor,
+            )),
+        title: const Text(
+          'SETTINGS',
+          style: TextStyle(
+            color: Color.fromARGB(255, 255, 255, 255),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        centerTitle: true,
+        backgroundColor: const Color.fromARGB(255, 124, 2, 26),
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ClipPath(
+            clipper: DiagonalPathClipperTwo(),
+
+            // jdkkjhfjlalsk
+            child: Container(
+              height: 150,
+              color: const Color.fromARGB(255, 124, 2, 26),
             ),
-       Padding(
-         padding: const EdgeInsets.only(left: 10),
-         child: Column(
-          children: [
-             Hight40,
-                               TextButton.icon(onPressed: (){}, icon:const Icon(Icons.power_settings_new_outlined,color: WhiteColor,size: 30,), label: const Text(
-         'Logout',
-               style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 20,
-                     fontWeight: FontWeight.bold,
-               ),                 
-                        ),),
-                                       Hight10,
-
-          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.info_outline,color: WhiteColor,size: 30,), label:const  Text(
-         'About',
-               style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 20,
-                     fontWeight: FontWeight.bold,
-               ),                 
-                        ),),
-                        Hight10,
-                          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.restart_alt_rounded,color: WhiteColor,size: 30,), label: const Text(
-         'Reset',
-               style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 20,
-                     fontWeight: FontWeight.bold,
-               ),                 
-                        ),),
-                        Hight10,
-                          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.share,color: WhiteColor,size: 30,), label:const  Text(
-         'Share',
-               style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 20,
-                     fontWeight: FontWeight.bold,
-               ),                 
-                        ),),
-
-                      
-                                                Hight10,
-
-                          TextButton.icon(onPressed: (){}, icon:const Icon(Icons.privacy_tip_outlined,color: WhiteColor,size: 30,), label:const  Text(
-         'privacy',
-               style: TextStyle(
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontSize: 20,
-                     fontWeight: FontWeight.bold,
-               ),                 
-                        ),),
-                        Hight10,
-                   
-          ],
-         ),
-       )
-      
-      ],),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Column(
+              children: [
+                Hight40,
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.power_settings_new_outlined,
+                    color: WhiteColor,
+                    size: 30,
+                  ),
+                  label: const Text(
+                    'Logout',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Hight10,
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.info_outline,
+                    color: WhiteColor,
+                    size: 30,
+                  ),
+                  label: const Text(
+                    'About',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Hight10,
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.restart_alt_rounded,
+                    color: WhiteColor,
+                    size: 30,
+                  ),
+                  label: const Text(
+                    'Reset',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Hight10,
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.share,
+                    color: WhiteColor,
+                    size: 30,
+                  ),
+                  label: const Text(
+                    'Share',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Hight10,
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.privacy_tip_outlined,
+                    color: WhiteColor,
+                    size: 30,
+                  ),
+                  label: const Text(
+                    'privacy',
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Hight10,
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

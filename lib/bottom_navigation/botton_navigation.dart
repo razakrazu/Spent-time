@@ -4,7 +4,6 @@ import 'package:spent_time/screens/home_screen/home_screen.dart';
 import 'package:spent_time/screens/my_rooms/my_rooms.dart';
 import 'package:spent_time/screens/settings/settings_screen.dart';
 
-
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({Key? key}) : super(key: key);
 
@@ -16,19 +15,11 @@ class BottomNavigationScreen extends StatefulWidget {
 class _BottomNavigationExampleState extends State {
   int _selectedTab = 0;
 
-  List pages =  [
-    
+  List pages = [
     Home_Screen(),
-       AddRooms(),
-   MyRoomsScreen(),
- 
-  
+    AddRooms(),
+    MyRoomsScreen(),
     SettingsScreen(),
-   
-
-    
-  
-  
   ];
 
   _changeTab(int index) {
@@ -40,7 +31,6 @@ class _BottomNavigationExampleState extends State {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: pages[_selectedTab],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedTab,
@@ -49,14 +39,13 @@ class _BottomNavigationExampleState extends State {
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-           BottomNavigationBarItem(
-              icon: Icon(Icons.add_circle_outline_outlined), label: "ADD"),
-          BottomNavigationBarItem(icon: Icon(Icons.bed_outlined), label: "MyRoom"),
-         
-          // BottomNavigationBarItem(
-          //     icon: Icon(Icons.person), label: "Profile"),
           BottomNavigationBarItem(
-            
+              icon: Icon(Icons.add_circle_outline_outlined), label: "ADD"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.bed_outlined), label: "MyRoom"),
+
+          
+          BottomNavigationBarItem(
               icon: Icon(Icons.settings), label: "Settings"),
         ],
       ),

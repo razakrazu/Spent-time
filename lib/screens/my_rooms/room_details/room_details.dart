@@ -17,7 +17,7 @@ class RoomDetails extends StatelessWidget {
             onPressed: () {
               Get.back();
             },
-            icon:  Icon(
+            icon: Icon(
               Icons.arrow_back,
               color: WhiteColor,
             )),
@@ -45,7 +45,7 @@ class RoomDetails extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    height:200,
+                    height: 200,
                     child: GridView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: 6,
@@ -57,12 +57,14 @@ class RoomDetails extends StatelessWidget {
                       ),
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
-                        height: 200,  
-                        width: double.infinity,
+                          height: 200,
+                          width: double.infinity,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               image: const DecorationImage(
-                                image: AssetImage( 'lib/assets/klglff.jpg',),
+                                image: AssetImage(
+                                  'lib/assets/klglff.jpg',
+                                ),
                                 fit: BoxFit.cover,
                               )),
                         );
@@ -79,151 +81,127 @@ class RoomDetails extends StatelessWidget {
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children:  [
-                         Padding(
-                           padding:  EdgeInsets.only(left: 10,top: 30),
-                           child:  Text(
-                                          'HotalName : Dream villa',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                         ),
-                          Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child:  Text(
-                                          'Bed : double ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                         ),
-                           Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'Ac : nonAc ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
-                             Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'Tv : yes ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
-                             Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'heater : yes ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
-                             Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'Food : yes ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
-                             Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'swimingpool : yes ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
-                         Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'Wifi : yes ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
-                             Padding(
-                           padding:  EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'Amount : 3000 ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
-                            
-
-                            Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'parking : yes ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
-                            Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'Workout : yes ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
-                            Padding(
-                           padding: const EdgeInsets.only(left: 10,top: 10),
-                           child: Text(
-                                          'jogging : yes ',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                             color: Color.fromARGB(255, 230, 228, 228),
-                                         
-                                          ),
-                                        ),
-                                        
-                         ),
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 30),
+                          child: Text(
+                            'HotalName : Dream villa',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'Bed : double ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'Ac : nonAc ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'Tv : yes ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'heater : yes ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'Food : yes ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'swimingpool : yes ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'Wifi : yes ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'Amount : 3000 ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'parking : yes ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'Workout : yes ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, top: 10),
+                          child: Text(
+                            'jogging : yes ',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 230, 228, 228),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
