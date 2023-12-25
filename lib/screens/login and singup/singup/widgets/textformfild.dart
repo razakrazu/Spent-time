@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -11,15 +10,16 @@ class Mytextformfieds extends StatelessWidget {
   final String labal;
   final IconData icons;
   final TextEditingController onChanged;
-  final  String? Function(File?)validator;
+ final TextInputType texttype;
+ final int maxLength;
 
   Mytextformfieds({
     super.key,
     required this.labal,
     required this.icons,
     required this.onChanged,
-    required this.validator,
-
+     required this.texttype,
+     required this.maxLength,
 
   });
   
@@ -29,16 +29,13 @@ class Mytextformfieds extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: onChanged,
-
-          
+      keyboardType: texttype,
+      maxLength: maxLength,
       decoration: InputDecoration(
-        
         border: OutlineInputBorder(
-          
           borderRadius: BorderRadius.circular(90),
         ),
         hintText: labal,
-        
         hintStyle: const TextStyle(
           color: Colors.white,
         ),

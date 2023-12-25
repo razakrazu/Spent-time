@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
 import 'package:spent_time/core/color.dart';
+import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/singup_screen.dart';
+import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
 
 class Login_Screen extends StatelessWidget {
   const Login_Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final clientController = Get.put(ClientSignUpController());
+    final formkey = GlobalKey<FormState>();
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       body:
@@ -44,44 +48,26 @@ class Login_Screen extends StatelessWidget {
                           height: 70,
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(25),
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(90),
-                              ),
-                              hintText: 'Email',
-                              hintStyle: const TextStyle(
-                                color: Colors.white,
-                              ),
-                              prefixIcon: const Icon(
-                                Icons.mail_outline,
-                                color: Color.fromARGB(255, 200, 200, 200),
-                              ),
-                            ),
-                            style: TextStyle(color: WhiteColor),
-                          ),
+                          padding: const EdgeInsets.all(20),
+                           child: Mytextformfieds(
+                          labal: 'Email',
+                          icons: Icons.mail_outline,
+                          onChanged: clientController.emailController,
+                           texttype: TextInputType.text,
+                              maxLength: 30,
+                       
+                        ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(25),
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderSide:
-                                    const BorderSide(color: Colors.white),
-                                borderRadius: BorderRadius.circular(90),
-                              ),
-                              hintText: 'Password',
-                              hintStyle: const TextStyle(
-                                color: Colors.white,
-                              ),
-                              prefixIcon: const Icon(
-                                Icons.lock_outlined,
-                                color: Color.fromARGB(255, 200, 200, 200),
-                              ),
-                            ),
-                            style: TextStyle(color: WhiteColor),
-                          ),
+                          padding: const EdgeInsets.all(20),
+                          child: Mytextformfieds(
+                          labal: 'password',
+                          icons: Icons.lock,
+                          onChanged: clientController.passwordController,
+                           texttype: TextInputType.text,
+                              maxLength: 30,
+                       
+                        ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 200),

@@ -31,7 +31,7 @@ class Singup_Screen extends StatelessWidget {
             padding: const EdgeInsets.only(left: 20, right: 20, top: 120),
             child: ClipPath(
               child: Container(
-                height: 590,
+                height: 600,
                 width: 350,
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -46,49 +46,47 @@ class Singup_Screen extends StatelessWidget {
                         height: 20,
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(15),
                         child: Mytextformfieds(
                           labal: 'Name',
                           icons: Icons.person,
                           onChanged: clientController.nameController,
-                          validator: 
-                          (value)=>clientController.nameController.text.isEmpty
-                          ?'please enter your name'
-                          : null,
+                             maxLength: 30,
+                           texttype: TextInputType.text,
                         ),
                         
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(15),
                         child: Mytextformfieds(
                           labal: 'Email',
                           icons: Icons.mail_outline,
                           onChanged: clientController.emailController,
-                          validator:(value)=> clientController.emailController.text.isEmpty
-                          ?'please Enter email'
-                          :null,
+                           texttype: TextInputType.text,
+                              maxLength: 30,
+                       
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(15),
                         child: Mytextformfieds(
                           labal: 'Number',
                           icons: Icons.call,
                           onChanged: clientController.numberController,
-                          validator: (value)=>clientController.nameController.text.isEmpty
-                          ?'please enter number'
-                          :null,
+                           texttype: TextInputType.number,
+                           maxLength: 10,
+                        
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(15),
                         child: Mytextformfieds(
                           labal: 'password',
                           icons: Icons.lock,
                           onChanged: clientController.passwordController,
-                          validator: (value)=>clientController.passwordController.text.isEmpty
-                          ?'please enter password'
-                          :null,
+                           texttype: TextInputType.text,
+                              maxLength: 30,
+                       
                         ),
                       ),
                       Padding(
@@ -104,9 +102,9 @@ class Singup_Screen extends StatelessWidget {
 
                             }
                           },
-                          child: Text(
+                          child: const  Text(
                             'SING UP',
-                            style: const TextStyle(
+                            style:  TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255)),
                           ),
                           style: ElevatedButton.styleFrom(

@@ -43,7 +43,7 @@ class SettingsScreen extends StatelessWidget {
                 Hight40,
                 TextButton.icon(
                   onPressed: () {
-                       Get.to(LogoutScreen());
+                       Get.to( const LogoutScreen());
                   },
                   icon: const Icon(
                     Icons.power_settings_new_outlined,
