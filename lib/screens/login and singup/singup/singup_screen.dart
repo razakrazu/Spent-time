@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
+import 'package:spent_time/bottom_navigation/botton_navigation.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
 
@@ -50,7 +51,7 @@ class Singup_Screen extends StatelessWidget {
                           labal: 'Name',
                           icons: Icons.person,
                           onChanged: clientController.nameController,
-                          validation: 
+                          validator: 
                           (value)=>clientController.nameController.text.isEmpty
                           ?'please enter your name'
                           : null,
@@ -63,7 +64,7 @@ class Singup_Screen extends StatelessWidget {
                           labal: 'Email',
                           icons: Icons.mail_outline,
                           onChanged: clientController.emailController,
-                          validation:(value)=> clientController.emailController.text.isEmpty
+                          validator:(value)=> clientController.emailController.text.isEmpty
                           ?'please Enter email'
                           :null,
                         ),
@@ -74,7 +75,7 @@ class Singup_Screen extends StatelessWidget {
                           labal: 'Number',
                           icons: Icons.call,
                           onChanged: clientController.numberController,
-                          validation: (value)=>clientController.nameController.text.isEmpty
+                          validator: (value)=>clientController.nameController.text.isEmpty
                           ?'please enter number'
                           :null,
                         ),
@@ -85,7 +86,7 @@ class Singup_Screen extends StatelessWidget {
                           labal: 'password',
                           icons: Icons.lock,
                           onChanged: clientController.passwordController,
-                          validation: (value)=>clientController.passwordController.text.isEmpty
+                          validator: (value)=>clientController.passwordController.text.isEmpty
                           ?'please enter password'
                           :null,
                         ),
@@ -95,11 +96,12 @@ class Singup_Screen extends StatelessWidget {
                             const EdgeInsets.only(left: 80, right: 80, top: 29),
                         child: ElevatedButton(
                           onPressed: () {
+                            Get.to(BottomNavigationScreen());
                             if (formkey.currentState!.validate()) {
                               ClientSignUpController.instance.registerUser(
                                   clientController.emailController.text.trim(),
-                                  clientController.passwordController.text
-                                      .trim());
+                                  clientController.passwordController.text .trim());
+
                             }
                           },
                           child: Text(

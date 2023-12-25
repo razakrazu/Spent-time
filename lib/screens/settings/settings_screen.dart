@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
+import 'package:spent_time/screens/settings/logout/logout_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -13,14 +14,7 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: BlackColor,
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: WhiteColor,
-            )),
+        
         title: const Text(
           'SETTINGS',
           style: TextStyle(
@@ -48,7 +42,9 @@ class SettingsScreen extends StatelessWidget {
               children: [
                 Hight40,
                 TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                       Get.to(LogoutScreen());
+                  },
                   icon: const Icon(
                     Icons.power_settings_new_outlined,
                     color: WhiteColor,
@@ -65,7 +61,9 @@ class SettingsScreen extends StatelessWidget {
                 ),
                 Hight10,
                 TextButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(LogoutScreen());
+                  },
                   icon: const Icon(
                     Icons.info_outline,
                     color: WhiteColor,

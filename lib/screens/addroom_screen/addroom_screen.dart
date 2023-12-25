@@ -13,14 +13,7 @@ class AddRooms extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: WhiteColor,
-            )),
+          automaticallyImplyLeading:false,
         title: const Text(
           'ADD ROOM',
           style: TextStyle(

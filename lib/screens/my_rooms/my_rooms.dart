@@ -14,14 +14,7 @@ class MyRoomsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: BlackColor,
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: WhiteColor,
-            )),
+          automaticallyImplyLeading:false,
         title: const Text(
           'MY ROOMS',
           style: TextStyle(

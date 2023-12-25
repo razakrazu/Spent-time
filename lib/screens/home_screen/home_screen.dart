@@ -11,14 +11,7 @@ class Home_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {
-              Get.back();
-            },
-            icon: const Icon(
-              Icons.arrow_back,
-              color: WhiteColor,
-            )),
+       automaticallyImplyLeading:false,
         title: const Text(
           'HOME',
           style: TextStyle(
