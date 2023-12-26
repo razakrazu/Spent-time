@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/core/title&text.dart';
+import 'package:spent_time/screens/login%20and%20singup/widgets/enter_email_screen.dart';
 import 'package:spent_time/screens/login%20and%20singup/widgets/forget_password_btn.dart';
 
 Future<dynamic> show_Modal_Bottom_Sheet(BuildContext context) {
@@ -22,7 +24,7 @@ Future<dynamic> show_Modal_Bottom_Sheet(BuildContext context) {
                                 children: [
                              
                              
-                                    Text(forgetPasswordEmainTitle, style: TextStyle(
+                                    Text(forgetPasswordEmailTitle, style: TextStyle(
                                          color: Color.fromARGB(255, 255, 255, 255),
                                          
                                          fontWeight: FontWeight.bold,
@@ -36,7 +38,10 @@ Future<dynamic> show_Modal_Bottom_Sheet(BuildContext context) {
                                    child: ForgotPasswordBtnWidget(
                                     btnIcon:Icons.mail_outline ,
                                     title: 'Email',
-                                     onTap: () {}, 
+                                     onTap: () {
+                                      Navigator.pop(context);
+                                      Get.to(EnterEmailScreen());
+                                     }, 
                                      subtitle: 'Reset via Email verification',),
                                  ),
                                 Padding(

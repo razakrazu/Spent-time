@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-import 'package:get/get.dart';
-import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 
 class Home_Screen extends StatelessWidget {

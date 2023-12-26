@@ -16,29 +16,35 @@ final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-     height: 80,
-      decoration: BoxDecoration(
-     borderRadius: BorderRadius.circular(10),
-     color: Color.fromARGB(255, 159, 159, 157),
-                  ),
-                  
-                               
-     child:Row(
-       children: [
-       Width20,
-         Icon(btnIcon,size: 50 ,),
-         Column(
-           crossAxisAlignment: CrossAxisAlignment.start,
-           children: [
-           Hight20,
-           Text(title,
-                                  style: TextStyle(fontWeight: FontWeight.bold)),
-                                  Text(subtitle,    style: TextStyle(color: BlackColor)
-                                 ),
-         ],),
-       ],
-     ) ,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+       height: 80,
+        decoration: BoxDecoration(
+       borderRadius: BorderRadius.circular(10),
+       color: Color.fromARGB(255, 159, 159, 157),
+                    ),
+                    
+                                 
+       child:Row(
+         children: [
+         Width20,
+           Icon(btnIcon,size: 50 ,),
+           
+           Column(
+             crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+              
+             Hight20,
+             Text(title,
+       style: TextStyle(fontWeight: FontWeight.bold)),
+     Text(subtitle,    style: TextStyle(color: BlackColor),
+                                   ),
+                                   
+           ],),
+         ],
+       ) ,
+      ),
     );
   }
 }
