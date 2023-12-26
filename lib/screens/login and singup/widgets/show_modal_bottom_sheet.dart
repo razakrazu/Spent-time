@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/core/title&text.dart';
-import 'package:spent_time/screens/login%20and%20singup/widgets/forgetpassword_btn.dart';
+import 'package:spent_time/screens/login%20and%20singup/widgets/forget_password_btn.dart';
 
 Future<dynamic> show_Modal_Bottom_Sheet(BuildContext context) {
     return showModalBottomSheet(context: context,
@@ -22,14 +22,14 @@ Future<dynamic> show_Modal_Bottom_Sheet(BuildContext context) {
                                 children: [
                              
                              
-                                    Text(forgetPasswordMainTitle, style: TextStyle(
+                                    Text(forgetPasswordEmainTitle, style: TextStyle(
                                          color: Color.fromARGB(255, 255, 255, 255),
                                          
                                          fontWeight: FontWeight.bold,
                                          fontSize: 30,
                                        ),),
                                        Hight10,
-                                       Text(forgetPasswordPupupText,   style: const TextStyle(color: Colors.white,fontSize: 17),
+                                       Text(forgetPasswordSubtitle,   style: const TextStyle(color: Colors.white,fontSize: 17),
                                           ),
                                  Padding(
                                    padding: const EdgeInsets.only(right: 20,top: 30),

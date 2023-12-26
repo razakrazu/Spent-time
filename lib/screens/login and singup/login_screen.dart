@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/singup_screen.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
-import 'package:spent_time/screens/login%20and%20singup/widgets/showModalBottomSheet.dart';
+import 'package:spent_time/screens/login%20and%20singup/widgets/show_modal_bottom_sheet.dart';
 
 class Login_Screen extends StatelessWidget {
   const Login_Screen({super.key});
