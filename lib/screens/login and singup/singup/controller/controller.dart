@@ -10,6 +10,8 @@ class ClientSignUpController extends GetxController {
   TextEditingController emailController = TextEditingController();
   TextEditingController numberController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController loginEmail =   TextEditingController();
+  TextEditingController loginpassword =  TextEditingController();
 
   void registerUser(String emailController, String passwordController) {
     AuthenticationRepositry.instance

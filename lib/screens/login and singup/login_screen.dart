@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
-import 'package:spent_time/core/color.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/singup_screen.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
+import 'package:spent_time/screens/login%20and%20singup/widgets/showModalBottomSheet.dart';
 
 class Login_Screen extends StatelessWidget {
   const Login_Screen({super.key});
@@ -65,15 +65,17 @@ class Login_Screen extends StatelessWidget {
                           icons: Icons.lock,
                           onChanged: clientController.passwordController,
                            texttype: TextInputType.text,
-                              maxLength: 30,
+                           maxLength: 30,
                        
                         ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 200),
                           child: TextButton(
-                            onPressed: () {},
-                            child: const Text('forgot password',
+                            onPressed: () {
+                              show_Modal_Bottom_Sheet(context);
+                            },
+                            child: const Text('Forget Password',
                                 style: TextStyle(color: Colors.white)),
                           ),
                         ),
@@ -83,13 +85,14 @@ class Login_Screen extends StatelessWidget {
                             right: 80,
                           ),
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                            },
                             child: Text(
                               'Log In',
                               style: const TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: Color.fromARGB(255, 76, 73, 73),
+                              primary: Color.fromARGB(255, 83, 83, 83),
                             ),
                           ),
                         ),
@@ -115,4 +118,5 @@ class Login_Screen extends StatelessWidget {
       // }),
     );
   }
+
 }
