@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Textfiled extends StatelessWidget {
+class MainTitile extends StatelessWidget {
   final label;
-  const  Textfiled({
+  const  MainTitile({
     super.key,
     required this.label
   });
@@ -14,6 +14,7 @@ class Textfiled extends StatelessWidget {
       style: TextStyle(
         fontSize: 18,
         color: Color.fromARGB(255, 230, 228, 228),
+        fontWeight: FontWeight.bold
       ),
     );
   }
