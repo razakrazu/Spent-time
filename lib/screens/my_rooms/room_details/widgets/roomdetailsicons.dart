@@ -16,7 +16,7 @@ final futuretext;
        Icon(futureicon,color: WhiteColor,size: 35,),
       Text(
           futuretext,
-            style: TextStyle(
+            style: const TextStyle(
              fontWeight: FontWeight.bold,
               color: Color.fromARGB(255, 255, 255, 255),
               fontSize: 12

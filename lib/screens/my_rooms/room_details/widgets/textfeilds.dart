@@ -11,7 +11,7 @@ class MainTitile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
      label,
-      style: TextStyle(
+      style:const TextStyle(
         fontSize: 18,
         color: Color.fromARGB(255, 230, 228, 228),
         fontWeight: FontWeight.bold
