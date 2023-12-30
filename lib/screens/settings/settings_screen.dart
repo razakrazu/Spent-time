@@ -5,7 +5,9 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/authentication_controller/authentication_cantroller.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
 import 'package:spent_time/screens/settings/logout/logout_screen.dart';
+import 'package:spent_time/screens/widgets/frofile_manu.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -15,7 +17,6 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: BlackColor,
       appBar: AppBar(
-        
         title: const Text(
           'SETTINGS',
           style: TextStyle(
@@ -26,116 +27,79 @@ class SettingsScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromARGB(255, 124, 2, 26),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Stack(
         children: [
           ClipPath(
             clipper: DiagonalPathClipperTwo(),
-
             child: Container(
               height: 150,
               color: const Color.fromARGB(255, 124, 2, 26),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Column(
-              children: [
-                Hight40,
-                TextButton.icon(
-                  onPressed: () {
-                       Get.to( const LogoutScreen());
-                  },
-                  icon: const Icon(
-                    Icons.power_settings_new_outlined,
-                    color: WhiteColor,
-                    size: 30,
-                  ),
-                  label: const Text(
-                    'Logout',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        SizedBox(
+                          height: 150,
+                          width: 100,
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(500),
+                              child:
+                                  Image(image: AssetImage('lib/assets/fjgk.jpg'))),
+                        ),
+                         Positioned(
+                          bottom: 0,
+                          right: 0,
+                           child: Container(
+                                   width: 34,
+                                   height: 35,
+                                   decoration: BoxDecoration(
+                                       borderRadius: BorderRadius.circular(100),
+                                       color: WhiteColor.withOpacity(0.2)),
+                                   child: Icon(
+                                     Icons.edit,
+                                     color: WhiteColor,
+                                   ),
+                                 ),
+                         ),
+                      ],
                     ),
-                  ),
+                    Hight10,
+                    MainTitile(label: 'Amal'),
+                    Hight10,
+                    ElevatedButton(
+                        onPressed: () {}, child: Text('Edit profile')),
+                  ],
                 ),
-                Hight10,
-                TextButton.icon(
-                  onPressed: () {
-                  AuthenticationRepositry.instance.login();
-                  },
-                  icon: const Icon(
-                    Icons.info_outline,
-                    color: WhiteColor,
-                    size: 30,
-                  ),
-                  label: const Text(
-                    'About',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Hight10,
-                TextButton.icon(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.restart_alt_rounded,
-                    color: WhiteColor,
-                    size: 30,
-                  ),
-                  label: const Text(
-                    'Reset',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Hight10,
-                TextButton.icon(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.share,
-                    color: WhiteColor,
-                    size: 30,
-                  ),
-                  label: const Text(
-                    'Share',
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Hight10,
-                Padding(
-                  padding: const EdgeInsets.only(left: 8),
-                  child: TextButton.icon(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.privacy_tip_outlined,
-                      color: WhiteColor,
-                      size: 30,
-                    ),
-                    label: const Text(
-                      'privacy',
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-                Hight10,
-              ],
-            ),
+              ),
+              Hight40,
+              ProfileManuWidget(
+                profileIcon: Icons.settings,
+                profileTitle: 'Settings',
+              ),
+              ProfileManuWidget(
+                profileIcon: Icons.notes_sharp,
+                profileTitle: 'About',
+              ),
+              ProfileManuWidget(
+                profileIcon: Icons.share,
+                profileTitle: 'Share',
+              ),
+              Hight20,
+              ProfileManuWidget(
+                profileIcon: Icons.privacy_tip_outlined,
+                profileTitle: 'privacy',
+              ),
+              ProfileManuWidget(
+                profileIcon: Icons.power_settings_new_outlined,
+                profileTitle: 'LogOut',
+              ),
+            ],
           )
         ],
       ),
