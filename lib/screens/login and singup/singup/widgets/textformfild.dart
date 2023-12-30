@@ -33,7 +33,7 @@ class Mytextformfieds extends StatelessWidget {
       maxLength: maxLength,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(90),
+          borderRadius: BorderRadius.circular(15),
         ),
         hintText: labal,
         hintStyle: const TextStyle(

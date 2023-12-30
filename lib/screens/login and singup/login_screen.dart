@@ -37,8 +37,8 @@ class Login_Screen extends StatelessWidget {
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
                       border: Border.all(
-                          color: const Color.fromARGB(255, 255, 255, 255)),
-                      borderRadius: BorderRadius.circular(50),
+                          color: Color.fromARGB(255, 183, 175, 175)),
+                      borderRadius: BorderRadius.circular(20),
                     ),
                     height: 500,
                     width: 300,
@@ -93,6 +93,11 @@ class Login_Screen extends StatelessWidget {
                             ),
                             style: ElevatedButton.styleFrom(
                               primary: Color.fromARGB(255, 83, 83, 83),
+                                 shape:RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ) ,                 
+                                side: BorderSide(width: 1,color:Color.fromARGB(255, 202, 202, 202),
+                           ),
                             ),
                           ),
                         ),

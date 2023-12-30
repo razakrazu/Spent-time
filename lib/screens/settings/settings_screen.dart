@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
+import 'package:spent_time/screens/login%20and%20singup/singup/authentication_controller/authentication_cantroller.dart';
 import 'package:spent_time/screens/settings/logout/logout_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -62,7 +63,7 @@ class SettingsScreen extends StatelessWidget {
                 Hight10,
                 TextButton.icon(
                   onPressed: () {
-                    Get.to(LogoutScreen());
+                  AuthenticationRepositry.instance.login();
                   },
                   icon: const Icon(
                     Icons.info_outline,

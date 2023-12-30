@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
 import 'package:spent_time/bottom_navigation/botton_navigation.dart';
+import 'package:spent_time/core/color.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
 
@@ -34,16 +35,16 @@ class Singup_Screen extends StatelessWidget {
                 height: 600,
                 width: 350,
                 decoration: BoxDecoration(
-                  border: Border.all(
-                      color: const Color.fromARGB(255, 233, 231, 231)),
-                  borderRadius: BorderRadius.circular(50),
+                  border: Border.all(width: 1,
+                      color: Color.fromARGB(255, 188, 185, 185)),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: Form(
                   key: formkey,
                   child: ListView(
                     children: [
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Padding(
                         padding: const EdgeInsets.all(15),
@@ -51,7 +52,7 @@ class Singup_Screen extends StatelessWidget {
                           labal: 'Name',
                           icons: Icons.person,
                           onChanged: clientController.nameController,
-                             maxLength: 30,
+                             maxLength: 15,
                            texttype: TextInputType.text,
                         ),
                         
@@ -85,16 +86,16 @@ class Singup_Screen extends StatelessWidget {
                           icons: Icons.lock,
                           onChanged: clientController.passwordController,
                            texttype: TextInputType.text,
-                              maxLength: 30,
+                              maxLength: 12,
                        
                         ),
                       ),
                       Padding(
                         padding:
-                            const EdgeInsets.only(left: 80, right: 80, top: 29),
+                            const EdgeInsets.only(left: 60, right: 60, top: 10),
                         child: ElevatedButton(
                           onPressed: () {
-                            Get.to(BottomNavigationScreen());
+                            // Get.to(BottomNavigationScreen());
                             if (formkey.currentState!.validate()) {
                               ClientSignUpController.instance.registerUser(
                                   clientController.emailController.text.trim(),
@@ -103,12 +104,17 @@ class Singup_Screen extends StatelessWidget {
                             }
                           },
                           child: const  Text(
-                            'SING UP',
+                            'SINGUP',
                             style:  TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255)),
                           ),
                           style: ElevatedButton.styleFrom(
                             primary: Color.fromARGB(255, 114, 114, 114),
+                            shape:RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ) ,                 
+                                side: BorderSide(width: 1,color:Color.fromARGB(255, 202, 202, 202),
+                           ),
                           ),
                         ),
                       ),

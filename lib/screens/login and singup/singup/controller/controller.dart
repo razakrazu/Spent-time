@@ -6,12 +6,12 @@ import 'package:spent_time/screens/login%20and%20singup/singup/authentication_co
 class ClientSignUpController extends GetxController {
   static ClientSignUpController get instance => Get.find();
 
-  TextEditingController nameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController numberController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController loginEmail =   TextEditingController();
-  TextEditingController loginpassword =  TextEditingController();
+  final nameController = TextEditingController();
+  final emailController = TextEditingController();
+  final numberController = TextEditingController();
+  final passwordController = TextEditingController();
+  final loginEmail =   TextEditingController();
+  final loginpassword =  TextEditingController();
 
   void registerUser(String emailController, String passwordController) {
     AuthenticationRepositry.instance
