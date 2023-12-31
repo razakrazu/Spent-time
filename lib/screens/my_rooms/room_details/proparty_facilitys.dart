@@ -11,7 +11,8 @@ class PropartyFacilitesScreen extends StatelessWidget {
       body:Column(
         children: [
 MainTitile(label: 'Food and Tea'),
-RoomFutureIconWidgets(futureicon: Icons.dinner_dining, futuretext: 'coffee/tea/Food')
+RoomFutureIconWidgets(futureicon: Icons.dinner_dining, futuretext: 'coffee/tea/Food'),
+
 
         ],
       ),

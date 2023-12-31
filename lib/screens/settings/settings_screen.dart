@@ -6,6 +6,7 @@ import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/authentication_controller/authentication_cantroller.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
+import 'package:spent_time/screens/profile/profile_screen.dart';
 import 'package:spent_time/screens/settings/logout/logout_screen.dart';
 import 'package:spent_time/screens/widgets/frofile_manu.dart';
 
@@ -73,7 +74,9 @@ class SettingsScreen extends StatelessWidget {
                     MainTitile(label: 'Amal'),
                     Hight10,
                     ElevatedButton(
-                        onPressed: () {}, child: Text('Edit profile')),
+                        onPressed: () {
+                          Get.to(ProfileScreen());
+                        }, child: Text('Edit profile')),
                   ],
                 ),
               ),
