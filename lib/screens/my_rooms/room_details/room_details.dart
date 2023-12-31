@@ -35,7 +35,7 @@ class RoomDetails extends StatelessWidget {
       //   centerTitle: true,
       //   backgroundColor: const Color.fromARGB(255, 124, 2, 26),
       // ),
-      body: Column(
+      body:ListView(
         children: [
           // ClipPath(
           //   clipper: WaveClipperOne(),
@@ -44,88 +44,137 @@ class RoomDetails extends StatelessWidget {
           //     color: const Color.fromARGB(255, 124, 2, 26),
           //   ),
           // ),
-            Stack(
-              children: [
-                Container(
-                        height: 380,
-                   
-                        child: GridView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: 6,
-                          gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 1,
-                            mainAxisExtent: 300,
-                            crossAxisSpacing: 1,
-                            mainAxisSpacing: 10,
+            // SingleChildScrollView(
+               Column(
+                children: [
+                  
+                  Container(
+                    
+                          height: 250,
+                     
+                          child: GridView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: 6,
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 1,
+                              mainAxisExtent: 370,
+                              crossAxisSpacing: 1,
+                              mainAxisSpacing: 1,
+                            ),
+                            itemBuilder: (BuildContext context, int index) {
+                              return Container(
+                            
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    image: const DecorationImage(
+                                      image: AssetImage(
+                                        'lib/assets/klglff.jpg',
+                                      ),
+                                      fit: BoxFit.fill
+                                    )),
+                              );
+                            },
                           ),
-                          itemBuilder: (BuildContext context, int index) {
-                            return Container(
-                          
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  image: const DecorationImage(
-                                    image: AssetImage(
-                                      'lib/assets/klglff.jpg',
-                                    ),
-                                    // fit: BoxFit.cover,
-                                  )),
-                            );
-                          },
                         ),
-                      ),
-                     SingleChildScrollView(
-
-                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                         children: [
-                        const   Padding(
-                            padding:  EdgeInsets.only(top: 350,left: 20),
-                            child: MainTitile(label: 'Proparty Facilites'),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 5,right: 5),
-                            child: Container(
-                         
-                              height: 290,
-                              
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15),
-                                border: Border.all(width: 2,color: Color.fromARGB(255, 156, 156, 156)),
-                                       color: Color.fromARGB(255, 50, 47, 45),
-                              ),
-                              child: Column(
-                                children: [
-                                  
-                                   const   Padding(
-                            padding:  EdgeInsets.only(right:170,top: 10),
-                            child: MainTitile(label: 'Proparty Facilites'),
-                          ),
-                                   Padding(
-                                 padding: const EdgeInsets.only(top: 1,),
+                      
+            
+                         Column(
+                           children: [
+           
+                            Padding(
+                              padding: const EdgeInsets.only(left: 5,right: 5),
+                              child: Container(
+                          
+                                height: 700,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                boxShadow: [BoxShadow(
+                                  spreadRadius: 32,
+                                  blurRadius: 50,
+                               
+                                )],
+                                  // borderRadius: BorderRadius.circular(10),
+                                  // border: Border.all(width: 0,color: Color.fromARGB(255, 134, 127, 127)),
+                                         color: Color.fromARGB(255, 51, 50, 48).withOpacity(0.5),
+                                ),
+                                child: Column(
+                                  children: [
+      Padding(
+        padding: const EdgeInsets.only(right: 190,top: 20),
+        child: Text(
+           'Dream Villa',
+        style:const TextStyle(
+          fontSize: 25,
+          color: Color.fromARGB(255, 230, 228, 228),
+          fontWeight: FontWeight.bold
+        ),
+          ),
+      ),
+                                     const   Padding(
+                              padding:  EdgeInsets.only(right:180,top: 20),
+                              child: MainTitile(label: 'Proparty Facilites'),
+                            ),
+                            Hight20,
+                                     Padding(
+                                   padding: const EdgeInsets.only(top: 1,),
+                                   
+                                   child: FuturesFullIconWidgets(),
+                                 ),
                                  
-                                 child: FuturesFullIconWidgets(),
-                               ),
-                                               Padding(
-                                                 padding: const EdgeInsets.only(left: 10,top: 30),
-                                                 child: SizedBox( 
-                                                  width: 
-                                                  200,
-                                                  height: 40,
-                                                   child: MyButtonWidget(btnLabel: 'View All ',
-                                                    ),),
-                                                 ),
-                                               
-                                               
-                                ],
+                                                 Padding(
+                                                   padding: const EdgeInsets.only(top: 30),
+                                                   child: SizedBox( 
+                                                    width: 
+                                                    320,
+                                                    height: 40,
+                                                     child: MyButtonWidget(btnLabel: 'View All ',
+                                                      ),),
+                                                   ),
+            
+                                                   Hight30,
+                                                   IconButton(onPressed: (){
+                                                    Get.to(PropartyFacilitesScreen());
+                                                   }, icon: Icon(Icons.add)),
+                                                 
+                                                  const   Padding(
+                              padding:  EdgeInsets.only(right:200,top: 10),
+                              child: MainTitile(label: 'About this  Hotal  '),
+                            ),
+Hight10,
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Text(
+                                 'Using a widget function instead of a widget fully guarantees that the widget and its controllers will be removed from memory when they are no longer ',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 230, 228, 228).withOpacity(0.7),
+                                  ),
+                                ),
+                            ),
+
+                    const   Padding(
+                              padding:  EdgeInsets.only(right:190,top: 10),
+                              child: MainTitile(label: 'Condect with Owner '),
+                            ),
+                            TextButton.icon(onPressed: (){}, 
+                            
+                            icon: Icon(Icons.call), label: Text('Call now',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Color.fromARGB(255, 230, 228, 228).withOpacity(0.7),
+                                  ),
+                                ),)
+                                  ]
+                                ),
                               ),
                             ),
-                          ),
-                         ],
-                       ),
-                     )
-              ],
-            ),
+                           ],
+                         ),
+                       
+                ],
+              ),
+            // ),
           
         ],
       ),

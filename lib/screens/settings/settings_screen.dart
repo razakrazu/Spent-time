@@ -33,7 +33,7 @@ class SettingsScreen extends StatelessWidget {
           ClipPath(
             clipper: DiagonalPathClipperTwo(),
             child: Container(
-              height: 150,
+              height: 260,
               color: const Color.fromARGB(255, 124, 2, 26),
             ),
           ),
@@ -45,14 +45,17 @@ class SettingsScreen extends StatelessWidget {
                   children: [
                     Stack(
                       children: [
-                        SizedBox(
-                          height: 150,
-                          width: 100,
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.circular(500),
-                              child:
-                                  Image(image: AssetImage('lib/assets/fjgk.jpg'))),
-                        ),
+                           Container(
+                                  height: 120,
+                                  width: 120,
+                                 decoration: BoxDecoration(
+                                  image: DecorationImage(image:  AssetImage('lib/assets/iug.jpeg'),
+                                  fit: BoxFit.cover),
+                                  borderRadius: BorderRadius.circular(400),
+                                  
+                                 ),
+                                 
+                                    ),
                          Positioned(
                           bottom: 0,
                           right: 0,
@@ -61,7 +64,7 @@ class SettingsScreen extends StatelessWidget {
                                    height: 35,
                                    decoration: BoxDecoration(
                                        borderRadius: BorderRadius.circular(100),
-                                       color: WhiteColor.withOpacity(0.2)),
+                                       color: BlackColor.withOpacity(0.3)),
                                    child: Icon(
                                      Icons.edit,
                                      color: WhiteColor,
