@@ -10,36 +10,73 @@ class PropartyFacilitesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: BlackColor,
+      backgroundColor: Color.fromARGB(255, 51, 50, 48).withOpacity(0.5),
       body:ListView(
         
         children: [
           Hight40,
-Row(
-  mainAxisAlignment: MainAxisAlignment.start,
-  children: [
-    
-        MainTitile(label: 'Food and Tea'),
-  ],
+Padding(
+  padding: const EdgeInsets.all(8.0),
+  child:   Column(
+  
+  crossAxisAlignment: CrossAxisAlignment.start,
+  
+    children: [
+          MainTitle(label: 'Food and Tea'),
+  
+          RoomFutureIconWidgets(futureicon: Icons.dinner_dining, futuretext: 'coffee/tea/Food'),
+    ],
+  
+  ),
 ),
-RoomFutureIconWidgets(futureicon: Icons.dinner_dining, futuretext: 'coffee/tea/Food'),
+Padding(
+  padding: const EdgeInsets.all(8.0),
+  child:   Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Hight10,
+  MainTitle(label: 'Washroom'),
+  Hight10,
+  RoomFutureIconWidgets(futureicon: Icons.dangerous , futuretext: 'Hair Dryer'),
+    ],
+  ),
+),
 
-Hight10,
-MainTitile(label: 'Washroom'),
-Hight10,
-RoomFutureIconWidgets(futureicon: Icons.dangerous , futuretext: 'Hair Dryer'),
-
-Hight10,
-MainTitile(label: 'Seating Area'),
-Hight10,
+Padding(
+  padding: const EdgeInsets.all(8.0),
+  child:   Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Hight10,
+  MainTitle(label: 'Seating Area'),
+  Hight10,
 RoomFutureIconWidgets(futureicon: Icons.subdirectory_arrow_left_sharp , futuretext: 'Hair Dryer'),
-Hight10,
-MainTitile(label: 'Media & Tecnology'),
-Hight10,
+    ],
+  ),
+),
+
+Padding(
+  padding: const EdgeInsets.all(8.0),
+  child:   Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Hight10,
+MainTitle(label: 'Media & Tecnology'),
+  Hight10,
 RoomFutureIconWidgets(futureicon: Icons.tv , futuretext: 'Tv'),
-Hight10,
-MainTitile(label: 'Hotal Facilities'),
-Hight20,
+    ],
+  ),
+),
+
+
+Padding(
+  padding: const EdgeInsets.all(8.0),
+  child:   Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Hight10,
+MainTitle(label: 'Hotal Facilities'),
+  Hight10,
 Row(
   children: [
 Width20,
@@ -52,14 +89,14 @@ Width30,
 RoomFutureIconWidgets(futureicon: Icons.assignment_turned_in_outlined , futuretext: 'Reception'),
   ],
 ),
+    ],
+  ),
+),
 
 
-Hight20,
-MainTitile(label: 'Washroom'),
-Hight10,
-RoomFutureIconWidgets(futureicon: Icons.dangerous , futuretext: 'Ac'),
-Hight10,
-RoomFutureIconWidgets(futureicon: Icons.dangerous , futuretext: 'Hair Dryer'),
+
+
+
         ],
       ),
     );

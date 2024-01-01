@@ -29,7 +29,7 @@ class ProfileManuWidget extends StatelessWidget {
             color: WhiteColor,
           ),
         ),
-        title: MainTitile(label: profileTitle),
+        title: MainTitle(label: profileTitle),
         trailing: Container(
           width: 33,
           height: 33,

@@ -100,7 +100,7 @@ class AddRooms extends StatelessWidget {
                 Row(
                   children: [
               MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Swiming pool',),
-                    Width10,
+                    Width20,
                 MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Food',),
                     Width30,
               MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Wifi',),
@@ -111,22 +111,22 @@ class AddRooms extends StatelessWidget {
                 Hight10,
                 Row(
                   children: [
-                    Width10,
+               
                     MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'power Backup',),
                     Width10,
                 MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Parking',),
-                    Width30,
+                    Width20,
               MyCheckBoxWidget(istrue: istrue, checkBoxTitle:  'Tv',),
                   ],
                 ),
                 Hight10,
                 Row(
                   children: [
-                      Width10,
+                   
                     MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Meeting Room',),
                     Width10,
                   MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Heater',),
-                    Width30,
+                    Width20,
                  MyCheckBoxWidget(istrue: istrue, checkBoxTitle:  'Ac',),
                   
                   ],

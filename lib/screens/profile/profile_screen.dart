@@ -78,7 +78,7 @@ class ProfileScreen extends StatelessWidget {
                             ],
                           ),
                           Hight10,
-                          MainTitile(label: 'Amal'),
+                          MainTitle(label: 'Amal'),
                           Hight10,
                           ElevatedButton(
                               onPressed: () {
