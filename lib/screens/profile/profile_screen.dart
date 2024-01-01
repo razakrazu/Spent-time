@@ -6,7 +6,7 @@ import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
-import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/text_feilds.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

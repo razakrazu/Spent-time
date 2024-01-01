@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/text_feilds.dart';
 
 class DiscriptionText_MainTitle extends StatelessWidget {
   const DiscriptionText_MainTitle({

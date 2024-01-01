@@ -4,10 +4,11 @@ import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/my_rooms/room_details/proparty_facilitys.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/futures_full_Icon_widgets.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/hotal_name.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/icon_button_widget.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/maintitle_discriptiontext.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/my_button_widget.dart';
-import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/text_feilds.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/title_subtitle.dart';
 
 class RoomDetails extends StatelessWidget {
@@ -51,38 +52,33 @@ class RoomDetails extends StatelessWidget {
                     padding: const EdgeInsets.only(left: 5, right: 5),
                     child: Container(
                       decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
+                        boxShadow: const [
+ BoxShadow(
                             spreadRadius: 32,
                             blurRadius: 50,
                           )
                         ],
-                        color: Color.fromARGB(255, 51, 50, 48).withOpacity(0.5),
+                        color:const Color.fromARGB(255, 51, 50, 48).withOpacity(0.5),
                       ),
                       child: Column(children: [
-                        Padding(
-                          padding: const EdgeInsets.only(right: 190, top: 20),
-                          child: Text(
-                            'Dream Villa',
-                            style: const TextStyle(
-                                fontSize: 25,
-                                color: Color.fromARGB(255, 230, 228, 228),
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
+const Padding(
+                    padding:  EdgeInsets.only(left: 15,),
+                    child:       Hotal_Name_Widget(hotalname: 'Dream Villa',),
+                  ),
+                    
                         const Padding(
                           padding: EdgeInsets.only(right: 180, top: 20),
                           child: MainTitle(label: 'Proparty Facilites'),
                         ),
                         Hight20,
-                        Padding(
-                          padding: const EdgeInsets.only(
+           const             Padding(
+                          padding:  EdgeInsets.only(
                             top: 1,
                           ),
                           child: FuturesFullIconWidgets(),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 30),
+                     const   Padding(
+                          padding:  EdgeInsets.only(top: 30),
                           child: SizedBox(
                             width: 320,
                             height: 40,
@@ -148,6 +144,7 @@ class RoomDetails extends StatelessWidget {
                               'Using a widget function instead of a widget fully guarantees that the widget and its controllers will be removed from memory when they are no longer ',
                           maintitle: 'About This Hotal',
                         ),
+                       
                         const Padding(
                           padding: EdgeInsets.only(right: 190, top: 40),
                           child: MainTitle(label: 'Condect with Owner '),
@@ -159,7 +156,26 @@ class RoomDetails extends StatelessWidget {
                             buttonIcon: Icons.call,
                             buttonTitle: 'Call Now ',
                           ),
-                        )
+                        ),
+                          const Padding(
+                          padding: EdgeInsets.only(right: 250, top: 20),
+                          child: MainTitle(label: 'Location'),
+                        ),
+                      
+                        Padding(
+                  padding: const EdgeInsets.only(left: 20,right: 20,top: 5),
+                  child: Container(
+                    height: 160,
+                    decoration: BoxDecoration(
+                      border: Border.all(width: 1, color: WhiteColor),
+                      borderRadius: BorderRadius.circular(10),
+                        image: const DecorationImage(
+                                image: AssetImage('lib/assets/hkejkfk.png'),
+                                fit: BoxFit.cover,
+                              )
+                    ),
+                  ),
+                ),
                       ]),
                     ),
                   ),
@@ -173,3 +189,5 @@ class RoomDetails extends StatelessWidget {
     );
   }
 }
+
+

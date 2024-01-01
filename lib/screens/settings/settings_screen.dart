@@ -5,7 +5,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/authentication_controller/authentication_cantroller.dart';
-import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/text_feilds.dart';
 import 'package:spent_time/screens/profile/profile_screen.dart';
 import 'package:spent_time/screens/settings/logout/logout_screen.dart';
 import 'package:spent_time/screens/widgets/frofile_manu.dart';
