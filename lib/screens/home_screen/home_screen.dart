@@ -11,14 +11,7 @@ class Home_Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: <Widget>[
-        Padding(
-          padding: const EdgeInsets.only(right: 30),
-          child: CircleAvatar(child: IconButton(onPressed: (){
-            // Get.to(ProfileScreen());
-          }, icon: Icon(Icons.person))),
-        ),
-        ],
+    
        automaticallyImplyLeading:false,
         title: const Text(
           'HOME',
@@ -42,56 +35,7 @@ class Home_Screen extends StatelessWidget {
               ),
             ),
 
-            // Container(
-            //   child:     Padding(
-            //                 padding: const EdgeInsets.only(left: 30,right: 30,top: 50),
-            //                 child: TextFormField(
-            //                   decoration: InputDecoration(
-            //                     border: OutlineInputBorder(
-            //                       borderRadius: BorderRadius.circular(90),
-            //                     ),
-            //                     hintText: 'Search',
-            //                     hintStyle: const TextStyle(
-            //                       color: Color.fromARGB(255, 183, 183, 183),
-            //                     ),
-            //                     prefixIcon:IconButton(onPressed: (){}, icon:const Icon(Icons.close,color: WhiteColor,))
-
-            //                   ),
-            //                 ),
-            //               ),
-
-            // ),
-            //   const      SizedBox(height: 30,),
-            //         Row(children: [
-            //  const         SizedBox(width: 10,),
-            //   Container(
-            //     height: 70,
-            //     width: 200,
-            //     decoration: BoxDecoration(
-            //       borderRadius: BorderRadius.circular(30),
-            //       color: Color.fromARGB(255, 103, 103, 102)
-            //     ),
-            //     child:const Row(
-            //       children: [
-            //         SizedBox(width: 5,),
-            //         CircleAvatar(
-            //           radius: 30,
-            //           backgroundImage: AssetImage('lib/assets/jgvjvjh.jpeg'),
-            //         ),
-            //         SizedBox(width: 10,),
-            //         Text(
-            //                                     'Chennai',
-            //                                     style: TextStyle(
-            //                                       fontSize: 18,
-            //                                        color: Color.fromARGB(255, 0, 0, 0),
-            //                                       fontWeight: FontWeight.bold,
-            //                                     ),
-            //                                   ),
-            //       ],
-            //     ),
-            //   ),
-
-            //         ],),
+           
             Expanded(
               child: Center(
                 child: ListView.separated(

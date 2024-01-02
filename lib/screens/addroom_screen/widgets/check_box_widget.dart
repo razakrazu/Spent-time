@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:spent_time/core/constants.dart';
 
 class MyCheckBoxWidget extends StatelessWidget {
-  const MyCheckBoxWidget({
+   MyCheckBoxWidget({
     super.key,
-    required this.istrue,required this.checkBoxTitle,
+    required this.checkBoxTitle,
   });
 
-  final bool istrue;
+   bool istrue = false;
 final checkBoxTitle;
   @override
   Widget build(BuildContext context) {
     return Row(children: [
              Width10,
           Checkbox(
-            value: istrue,
-            onChanged: (value) => () {},
+            value:null,
+            onChanged: (istrue) => () {},
+            tristate: true, 
           ),
        Text(
             checkBoxTitle,

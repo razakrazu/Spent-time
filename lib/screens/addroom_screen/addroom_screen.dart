@@ -9,7 +9,7 @@ import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformf
 
 class AddRooms extends StatelessWidget {
   AddRooms({super.key});
-  bool istrue = false;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +41,7 @@ class AddRooms extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
                   child: Container(
-                    height: 170,
+                    height: 200,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(25),
                       color: Colors.transparent,
@@ -52,8 +52,8 @@ class AddRooms extends StatelessWidget {
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 1,
-                        crossAxisSpacing: 1,
-                        mainAxisSpacing: 10,
+                       mainAxisExtent: 160,
+                        mainAxisSpacing: 2,
                       ),
                       itemBuilder: (BuildContext context, int index) {
                         return Container(
@@ -73,14 +73,14 @@ class AddRooms extends StatelessWidget {
                   ),
                 ),
                 Hight30,
-                Row(
+          const      Row(
                   children: [
                     AddRoomTextfFeld(textfieldtitle: 'Name', hintText: 'Enter propary name',),
                    AddRoomTextfFeld(textfieldtitle: 'Price', hintText: 'Enter Room rate',),
                   ],
                 ),
                 Hight20,
-                Row(
+            const    Row(
                   children: [
                     AddRoomTextfFeld(textfieldtitle: 'City', hintText: 'Enter Your city',),
                    AddRoomTextfFeld(textfieldtitle: 'State', hintText: 'Enter your state',),
@@ -88,22 +88,22 @@ class AddRooms extends StatelessWidget {
                   ],
                 ),
                 Hight10,
-                Row(
+         const       Row(
                   children: [
 
                   AddRoomTextfFeld(textfieldtitle: 'Pincode', hintText: 'Enter your pincode',),
                    AddRoomTextfFeld(textfieldtitle: 'Room categary', hintText: 'Enter types room',),
                   ],
                 ),
-               AdressTextField(fieldText: 'Proparty Adress',hintText: 'Enter your adreess',),
+         const      AdressTextField(fieldText: 'Proparty Adress',hintText: 'Enter your adreess',),
                 Hight10,
                 Row(
                   children: [
-              MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Swiming pool',),
+              MyCheckBoxWidget( checkBoxTitle: 'Swiming pool' ,),
                     Width20,
-                MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Food',),
+                MyCheckBoxWidget( checkBoxTitle: 'Food',),
                     Width30,
-              MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Wifi',),
+              MyCheckBoxWidget(checkBoxTitle: 'Wifi',),
 
                     Width10,
                   ],
@@ -112,22 +112,22 @@ class AddRooms extends StatelessWidget {
                 Row(
                   children: [
                
-                    MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'power Backup',),
+                    MyCheckBoxWidget( checkBoxTitle: 'power Backup',),
                     Width10,
-                MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Parking',),
+                MyCheckBoxWidget(checkBoxTitle: 'Parking',),
                     Width20,
-              MyCheckBoxWidget(istrue: istrue, checkBoxTitle:  'Tv',),
+              MyCheckBoxWidget( checkBoxTitle:  'Tv',),
                   ],
                 ),
                 Hight10,
                 Row(
                   children: [
                    
-                    MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Meeting Room',),
+                    MyCheckBoxWidget( checkBoxTitle: 'Meeting Room',),
                     Width10,
-                  MyCheckBoxWidget(istrue: istrue, checkBoxTitle: 'Heater',),
+                  MyCheckBoxWidget( checkBoxTitle: 'Heater',),
                     Width20,
-                 MyCheckBoxWidget(istrue: istrue, checkBoxTitle:  'Ac',),
+                 MyCheckBoxWidget( checkBoxTitle:  'Ac',),
                   
                   ],
                 ),
@@ -155,6 +155,7 @@ class AddRooms extends StatelessWidget {
                         height: 5,
                       ),
                     ),
+                     style: TextStyle(color: WhiteColor),
                   ),
                 ),
                 Hight20,

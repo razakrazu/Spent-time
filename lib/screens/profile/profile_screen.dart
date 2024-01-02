@@ -6,7 +6,7 @@ import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
-import 'package:spent_time/screens/my_rooms/room_details/widgets/text_feilds.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -39,7 +39,7 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                    padding: const EdgeInsets.only(top: 20,),
+                    padding: const EdgeInsets.only(top: 30,),
                     child: SingleChildScrollView(
                       child: Column(
                         
@@ -70,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                                              borderRadius: BorderRadius.circular(100),
                                              color: BlackColor.withOpacity(0.4)),
                                          child: Icon(
-                                           Icons.edit,
+                                           Icons.add_a_photo,
                                            color: WhiteColor,
                                          ),
                                        ),
@@ -80,10 +80,7 @@ class ProfileScreen extends StatelessWidget {
                           Hight10,
                           MainTitle(label: 'Amal'),
                           Hight10,
-                          ElevatedButton(
-                              onPressed: () {
-                             
-                              }, child: Text('Edit profile')),
+                    
                               Hight30,
                                Padding(
                               padding: const EdgeInsets.only(left: 30,right: 30),

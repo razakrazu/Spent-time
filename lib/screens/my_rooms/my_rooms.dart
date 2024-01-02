@@ -39,17 +39,20 @@ class MyRoomsScreen extends StatelessWidget {
             child: ListView.separated(
                 itemBuilder: (context, index) {
                   return Slidable(
-                startActionPane: ActionPane(
-                  motion: ScrollMotion(),
+                endActionPane: ActionPane(
+                  motion: DrawerMotion(),
                    dismissible: DismissiblePane(onDismissed: () {}),
                    children: [
-        //           Slidable(child: 
-        //         //  onPressed: doNothing,
-        // backgroundColor: Color(0xFFFE4A49),
-        // foregroundColor: Colors.white,
-        // icon: Icons.delete,
-        // label: 'Delete',
-        //           ),
+          SlidableAction(onPressed: null,
+                  backgroundColor: Color.fromARGB(255, 118, 17, 10),
+                  foregroundColor: Colors.white.withOpacity(0.7),
+                  icon: Icons.delete,
+                  label: 'Delete',),
+                   SlidableAction(onPressed: null,
+                  backgroundColor: Color.fromARGB(255, 19, 112, 44),
+                  foregroundColor: Color.fromARGB(255, 255, 255, 255).withOpacity(0.7),
+                  icon: Icons.edit,
+                  label: 'Edit',),
                 ]),
 
                     child: Container(
@@ -126,7 +129,7 @@ class MyRoomsScreen extends StatelessWidget {
                     ),
                   );
                 },
-                separatorBuilder: (context, index) => Hight10,
+                separatorBuilder: (context, index) => SizedBox(height: 4,),
                 itemCount: 10),
           ),
         ],

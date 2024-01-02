@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
-import 'package:spent_time/screens/my_rooms/room_details/widgets/text_feilds.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
 
 class Hotal_Name_Widget extends StatelessWidget {
   const Hotal_Name_Widget({

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spent_time/core/color.dart';
 
 class AdressTextField extends StatelessWidget {
   const AdressTextField({
@@ -9,7 +10,9 @@ final fieldText;
 // final onTap;
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
   Padding(
        padding: EdgeInsets.only(left: 15, bottom: 5),
        child: Text(
@@ -33,6 +36,7 @@ final fieldText;
              color: Color.fromARGB(255, 133, 133, 133),
            ),
          ),
+          style: TextStyle(color: WhiteColor),
        ),
      ),
     ],);

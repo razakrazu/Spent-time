@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spent_time/core/color.dart';
 
 class AddRoomTextfFeld extends StatelessWidget {
   const AddRoomTextfFeld({
@@ -35,6 +36,7 @@ final hintText;
                   color: Color.fromARGB(255, 133, 133, 133),
                 ),
               ),
+               style: TextStyle(color: WhiteColor),
             ),
           ),
         ],

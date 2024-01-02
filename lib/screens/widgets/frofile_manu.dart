@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spent_time/core/color.dart';
-import 'package:spent_time/screens/my_rooms/room_details/widgets/text_feilds.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
 
 class ProfileManuWidget extends StatelessWidget {
   const ProfileManuWidget({

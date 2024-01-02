@@ -8,7 +8,7 @@ import 'package:spent_time/screens/my_rooms/room_details/widgets/hotal_name.dart
 import 'package:spent_time/screens/my_rooms/room_details/widgets/icon_button_widget.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/maintitle_discriptiontext.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/my_button_widget.dart';
-import 'package:spent_time/screens/my_rooms/room_details/widgets/text_feilds.dart';
+import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/title_subtitle.dart';
 
 class RoomDetails extends StatelessWidget {
