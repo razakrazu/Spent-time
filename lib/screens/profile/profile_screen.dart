@@ -70,7 +70,7 @@ class ProfileScreen extends StatelessWidget {
                                              borderRadius: BorderRadius.circular(100),
                                              color: BlackColor.withOpacity(0.4)),
                                          child: Icon(
-                                           Icons.add_a_photo,
+                                           Icons.edit,
                                            color: WhiteColor,
                                          ),
                                        ),

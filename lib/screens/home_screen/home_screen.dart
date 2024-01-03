@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
-import 'package:get/get.dart';
 import 'package:spent_time/core/constants.dart';
-import 'package:spent_time/screens/profile/profile_screen.dart';
 
 class Home_Screen extends StatelessWidget {
   const Home_Screen({super.key});

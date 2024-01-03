@@ -4,7 +4,6 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:spent_time/core/color.dart';
-import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/my_rooms/room_details/room_details.dart';
 
 class MyRoomsScreen extends StatelessWidget {

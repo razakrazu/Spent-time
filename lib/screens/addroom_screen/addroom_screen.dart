@@ -5,7 +5,6 @@ import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/addroom_screen/widgets/addroom_textfeild.dart';
 import 'package:spent_time/screens/addroom_screen/widgets/adress_textfeild_widget.dart';
 import 'package:spent_time/screens/addroom_screen/widgets/check_box_widget.dart';
-import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
 
 class AddRooms extends StatelessWidget {
   AddRooms({super.key});

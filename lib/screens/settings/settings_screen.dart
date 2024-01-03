@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
+import 'package:spent_time/screens/login%20and%20singup/singup/authentication_controller/authentication_cantroller.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
 import 'package:spent_time/screens/profile/profile_screen.dart';
 import 'package:spent_time/screens/widgets/frofile_manu.dart';
@@ -102,6 +103,9 @@ class SettingsScreen extends StatelessWidget {
               ProfileManuWidget(
                 profileIcon: Icons.power_settings_new_outlined,
                 profileTitle: 'LogOut',
+            OnTap: ()=>AuthenticationRepositry.instance.login(),
+             
+                
               ),
             ],
           )
