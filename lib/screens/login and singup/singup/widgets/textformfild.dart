@@ -11,7 +11,7 @@ class Mytextformfieds extends StatelessWidget {
   final TextEditingController onChanged;
  final TextInputType texttype;
  final int maxLength;
-
+final validation;
   Mytextformfieds({
     super.key,
     required this.labal,
@@ -19,6 +19,7 @@ class Mytextformfieds extends StatelessWidget {
     required this.onChanged,
      required this.texttype,
      required this.maxLength,
+     required this.validation,
 
   });
   

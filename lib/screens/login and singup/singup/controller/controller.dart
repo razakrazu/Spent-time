@@ -12,6 +12,7 @@ class ClientSignUpController extends GetxController {
   final passwordController = TextEditingController();
   final loginEmail =   TextEditingController();
   final loginpassword =  TextEditingController();
+  final signupFormKey = GlobalKey<FormState>();
 
   void registerUser(String emailController, String passwordController) {
     AuthenticationRepositry.instance

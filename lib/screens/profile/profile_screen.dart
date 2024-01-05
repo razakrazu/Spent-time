@@ -5,6 +5,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
+import 'package:spent_time/screens/login%20and%20singup/singup/controller/signup_form_controller.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/textfeilds.dart';
 
@@ -90,6 +91,7 @@ class ProfileScreen extends StatelessWidget {
                                 onChanged: clientController.nameController,
                                    maxLength: 15,
                                  texttype: TextInputType.text,
+                                   validation:(value)=> SignUpValidater.validateEmptyText('Name', value),
                               ),
                               
                             ),
@@ -101,7 +103,7 @@ class ProfileScreen extends StatelessWidget {
                                 onChanged: clientController.emailController,
                                  texttype: TextInputType.text,
                                     maxLength: 30,
-                             
+                               validation:(value)=> SignUpValidater.validateEmptyText('Email ', value),
                               ),
                             ),
                             Padding(
@@ -112,7 +114,7 @@ class ProfileScreen extends StatelessWidget {
                                 onChanged: clientController.numberController,
                                  texttype: TextInputType.number,
                                  maxLength: 10,
-                              
+                                validation:(value)=> SignUpValidater.validateEmptyText('Number', value),
                               ),
                             ),
                             Padding(
@@ -123,7 +125,7 @@ class ProfileScreen extends StatelessWidget {
                                 onChanged: clientController.passwordController,
                                  texttype: TextInputType.text,
                                     maxLength: 12,
-                             
+                               validation:(value)=> SignUpValidater.validateEmptyText('Password', value),
                               ),
                             ),
                             Padding(

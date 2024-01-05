@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/controller/controller.dart';
+import 'package:spent_time/screens/login%20and%20singup/singup/controller/signup_form_controller.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/singup_screen.dart';
 import 'package:spent_time/screens/login%20and%20singup/singup/widgets/textformfild.dart';
 import 'package:spent_time/screens/login%20and%20singup/widgets/show_modal_bottom_sheet.dart';
@@ -55,7 +56,7 @@ class Login_Screen extends StatelessWidget {
                           onChanged: clientController.emailController,
                            texttype: TextInputType.text,
                               maxLength: 30,
-                       
+                         validation:(value)=> SignUpValidater.validateEmptyText('Email', value),
                         ),
                         ),
                         Padding(
@@ -66,6 +67,7 @@ class Login_Screen extends StatelessWidget {
                           onChanged: clientController.passwordController,
                            texttype: TextInputType.text,
                            maxLength: 30,
+                             validation:(value)=> SignUpValidater.validateEmptyText('Password', value),
                        
                         ),
                         ),
