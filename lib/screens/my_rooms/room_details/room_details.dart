@@ -75,7 +75,7 @@ const Padding(
                           padding:  EdgeInsets.only(
                             top: 1,
                           ),
-                          child: FuturesFullIconWidgets(),
+                          child: RoomFecliticesWidgets(),
                         ),
                      const   Padding(
                           padding:  EdgeInsets.only(top: 30),

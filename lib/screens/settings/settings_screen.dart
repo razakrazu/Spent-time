@@ -103,7 +103,7 @@ class SettingsScreen extends StatelessWidget {
               ProfileManuWidget(
                 profileIcon: Icons.power_settings_new_outlined,
                 profileTitle: 'LogOut',
-            OnTap: ()=>AuthenticationRepositry.instance.login(),
+            OnTap: ()=>AuthenticationRepositry.instance.logOut(),
              
                 
               ),

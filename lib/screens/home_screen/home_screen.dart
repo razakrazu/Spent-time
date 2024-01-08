@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:spent_time/core/constants.dart';
+import 'package:spent_time/screens/home_screen/widgets/hotal_widget.dart';
 
 class Home_Screen extends StatelessWidget {
   const Home_Screen({super.key});
@@ -62,84 +63,10 @@ class Home_Screen extends StatelessWidget {
                           Row(
                             children: [
                               Width10,
-                              Container(
-                                height: 200,
-                                width: 170,
-                                margin:
-                                    const EdgeInsets.symmetric(vertical: 10),
-                                decoration: BoxDecoration(
-                                  image: const DecorationImage(
-                                      image:
-                                          AssetImage('lib/assets/klglff.jpg'),
-                                      fit: BoxFit.cover),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: const Padding(
-                                  padding: EdgeInsets.only(top: 140, left: 10),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Hotal:Dream villa',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        'Place:Calicut',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 15,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Width20,
-                              Container(
-                                height: 200,
-                                width: 170,
-                                margin: EdgeInsets.symmetric(vertical: 10),
-                                decoration: BoxDecoration(
-                                  image: const DecorationImage(
-                                      image:
-                                          AssetImage('lib/assets/klglff.jpg'),
-                                      fit: BoxFit.cover),
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                                child: const Padding(
-                                  padding: EdgeInsets.only(top: 140, left: 10),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Hotal:Dream villa',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      SizedBox(
-                                        width: 10,
-                                      ),
-                                      Text(
-                                        'Place:Calicut',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 15,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
+                              HotalsWidgets(hotalname: 'Dream Villa',hotalplace: 'calicut',),
+                              Width10,
+                         HotalsWidgets(hotalname: 'Dream Villa',hotalplace: 'calicut',),
+
                             ],
                           ),
                         ],
@@ -162,3 +89,4 @@ class Home_Screen extends StatelessWidget {
     );
   }
 }
+

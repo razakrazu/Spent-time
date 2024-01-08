@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/screens/my_rooms/room_details/widgets/room_details_icons.dart';
 
-class FuturesFullIconWidgets extends StatelessWidget {
-  const FuturesFullIconWidgets({
+class RoomFecliticesWidgets extends StatelessWidget {
+  const RoomFecliticesWidgets({
     super.key,
   });
 

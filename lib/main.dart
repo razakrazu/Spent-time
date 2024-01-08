@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         getPages: [
           GetPage(name: '/', page: () => CircularProgressIndicator()),
+       
         ]);
   }
 }

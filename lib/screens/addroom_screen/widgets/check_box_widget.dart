@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:spent_time/core/constants.dart';
 
@@ -6,18 +7,22 @@ class MyCheckBoxWidget extends StatelessWidget {
    MyCheckBoxWidget({
     super.key,
     required this.checkBoxTitle,
+     this.onTap,
+    
   });
 
-   bool istrue = false;
+  bool? onTap ;
 final checkBoxTitle;
   @override
   Widget build(BuildContext context) {
     return Row(children: [
              Width10,
           Checkbox(
-            value:null,
-            onChanged: (istrue) => () {},
-            tristate: true, 
+            value:onTap,
+            onChanged: (Value) => () {
+  onTap =Value;
+            },
+    
           ),
        Text(
             checkBoxTitle,

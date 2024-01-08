@@ -42,7 +42,7 @@ class AuthenticationRepositry extends GetxController {
     }
   }
 
-  Future<void> loginWithEmailAndPassword(
+  Future<void> logOutWithEmailAndPassword(
       String emailController, String passwordController) async {
     try {
       await auth.signInWithEmailAndPassword(
@@ -51,5 +51,5 @@ class AuthenticationRepositry extends GetxController {
     } catch (_) {}
   }
 
-  Future<void> login() async => await auth.signOut();
+  Future<void> logOut() async => await auth.signOut();
 }

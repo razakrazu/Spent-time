@@ -29,8 +29,9 @@ class Singup_Screen extends StatelessWidget {
               color: const Color.fromARGB(255, 124, 2, 26),
             ),
           ),
-          Obx(
-            ()=> Padding(
+          // Obx(
+          //   ()=> 
+            Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 120),
               child: ClipPath(
                 child: Container(
@@ -134,7 +135,7 @@ class Singup_Screen extends StatelessWidget {
                 ),
               ),
             ),
-          ),
+          // ),
         ],
       ),
       // }),

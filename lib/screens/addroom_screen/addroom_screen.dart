@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:get/get.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
+import 'package:spent_time/screens/addroom_screen/room_datas/room_datas.dart';
 import 'package:spent_time/screens/addroom_screen/widgets/addroom_textfeild.dart';
 import 'package:spent_time/screens/addroom_screen/widgets/adress_textfeild_widget.dart';
 import 'package:spent_time/screens/addroom_screen/widgets/check_box_widget.dart';
-
+ 
+ RoomDatas roomdatacontroller = Get.put(RoomDatas());
 class AddRooms extends StatelessWidget {
   AddRooms({super.key});
   
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
       appBar: AppBar(
@@ -98,11 +103,12 @@ class AddRooms extends StatelessWidget {
                 Hight10,
                 Row(
                   children: [
-              MyCheckBoxWidget( checkBoxTitle: 'Swiming pool' ,),
+              MyCheckBoxWidget( checkBoxTitle: 'Swiming pool',onTap: false,
+            ),
                     Width20,
-                MyCheckBoxWidget( checkBoxTitle: 'Food',),
+                MyCheckBoxWidget( checkBoxTitle: 'Food',onTap: false),
                     Width30,
-              MyCheckBoxWidget(checkBoxTitle: 'Wifi',),
+              MyCheckBoxWidget(checkBoxTitle: 'Wifi',onTap: true),
 
                     Width10,
                   ],
@@ -111,22 +117,22 @@ class AddRooms extends StatelessWidget {
                 Row(
                   children: [
                
-                    MyCheckBoxWidget( checkBoxTitle: 'power Backup',),
+                    MyCheckBoxWidget( checkBoxTitle: 'power Backup',onTap: true),
                     Width10,
-                MyCheckBoxWidget(checkBoxTitle: 'Parking',),
+                MyCheckBoxWidget(checkBoxTitle: 'Parking',onTap: true),
                     Width20,
-              MyCheckBoxWidget( checkBoxTitle:  'Tv',),
+              MyCheckBoxWidget( checkBoxTitle:  'Tv',onTap: true),
                   ],
                 ),
                 Hight10,
                 Row(
                   children: [
                    
-                    MyCheckBoxWidget( checkBoxTitle: 'Meeting Room',),
+                    MyCheckBoxWidget( checkBoxTitle: 'Meeting Room',onTap: true),
                     Width10,
-                  MyCheckBoxWidget( checkBoxTitle: 'Heater',),
+                  MyCheckBoxWidget( checkBoxTitle: 'Heater',onTap: true),
                     Width20,
-                 MyCheckBoxWidget( checkBoxTitle:  'Ac',),
+                 MyCheckBoxWidget( checkBoxTitle:  'Ac',onTap: true),
                   
                   ],
                 ),
