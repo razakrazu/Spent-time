@@ -5,6 +5,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:spent_time/firebase_options.dart';
 import 'package:spent_time/sarvice/authantication_signup/authentication_sarvice.dart';
+import 'package:spent_time/view/addroom_screen/addroom_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
         getPages: [
           GetPage(name: '/', page: () => CircularProgressIndicator()),
-       
+       GetPage(name: '/AddRooms', page: ()=>AddRooms()),
         ]);
   }
 }

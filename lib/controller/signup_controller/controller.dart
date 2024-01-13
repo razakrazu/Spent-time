@@ -6,6 +6,8 @@ import 'package:spent_time/sarvice/authantication_signup/authentication_sarvice.
 import 'package:spent_time/model/signup_model/signup_model.dart';
 
 class ClientSignUpController extends GetxController {
+  final CollectionReference clientData =
+      FirebaseFirestore.instance.collection('clientData');
   static ClientSignUpController get instance => Get.find();
 
   final nameController = TextEditingController();

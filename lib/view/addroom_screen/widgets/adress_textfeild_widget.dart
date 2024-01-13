@@ -3,11 +3,11 @@ import 'package:spent_time/core/color.dart';
 
 class AdressTextField extends StatelessWidget {
   const AdressTextField({
-    super.key, this.hintText, this.fieldText,
+    super.key, this.hintText, this.fieldText,required this.onTap,
   });
 final hintText;
 final fieldText;
-// final onTap;
+final onTap;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -25,8 +25,7 @@ final fieldText;
      Padding(
        padding: const EdgeInsets.only(left: 10, right: 10),
        child: TextFormField(
-         
-         // controller: clientController.emailController,
+         controller: onTap,
          decoration: InputDecoration(
            border: OutlineInputBorder(
              borderRadius: BorderRadius.circular(10),

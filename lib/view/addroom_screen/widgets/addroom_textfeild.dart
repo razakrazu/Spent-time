@@ -3,11 +3,14 @@ import 'package:spent_time/core/color.dart';
 
 class AddRoomTextfFeld extends StatelessWidget {
   const AddRoomTextfFeld({
-    super.key,required this.textfieldtitle,required this.hintText,
+    super.key,
+    required this.textfieldtitle,
+    required this.hintText, 
+   required this.onTap,
   });
 final textfieldtitle;
 final hintText;
-// final onTap;
+final onTap;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -26,6 +29,7 @@ final hintText;
           Padding(
             padding: const EdgeInsets.only(left: 10, right: 10),
             child: TextFormField(
+              controller: onTap,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
