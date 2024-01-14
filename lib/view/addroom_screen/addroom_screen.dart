@@ -1,8 +1,13 @@
+import 'dart:io';
+import 'dart:math';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:spent_time/controller/addroom_controller/addroom_controller.dart';
+import 'package:spent_time/controller/addroom_controller/image_controller.dart';
 import 'package:spent_time/core/color.dart';
 import 'package:spent_time/core/constants.dart';
 import 'package:spent_time/model/addroom_model/model.dart';
@@ -10,6 +15,15 @@ import 'package:spent_time/view/addroom_screen/widgets/addroom_textfeild.dart';
 import 'package:spent_time/view/addroom_screen/widgets/adress_textfeild_widget.dart';
 import 'package:spent_time/view/addroom_screen/widgets/check_box_widget.dart';
  
+// RxString imageurl = ''.obs;
+// XFile image = XFile('');
+// String downloadUrlImage = '';
+// final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+List<XFile>? images= [];
+
+
+
 
 class AddRooms extends StatelessWidget {
   AddRooms({super.key});
@@ -18,6 +32,7 @@ class AddRooms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 RoomDatas roomcontroller = Get.put(RoomDatas());
+ImageController imagepick= Get.put(ImageController());
 
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 0, 0, 0),
@@ -39,40 +54,84 @@ RoomDatas roomcontroller = Get.put(RoomDatas());
           Expanded(
             child: ListView(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Container(
-                    height: 200,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: Colors.transparent,
-                    ),
-                    child: GridView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 6,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 1,
-                       mainAxisExtent: 160,
-                        mainAxisSpacing: 2,
-                      ),
-                      itemBuilder: (BuildContext context, int index) {
-                        return Container(
+                Stack(
+                  children: [
+                    Obx(
+                      ()=>Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Container(
+                          height: 200,
                           decoration: BoxDecoration(
-                              border: Border.all(width: 1),
-                              borderRadius: BorderRadius.circular(20),
-                              image: const DecorationImage(
-                                image: AssetImage('lib/assets/klglff.jpg'),
-                                fit: BoxFit.cover,
-                              )),
-                          child: const ClipRRect(
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            borderRadius: BorderRadius.circular(25),
+                            color: Colors.transparent,
                           ),
-                        );
-                      },
+                          child: GridView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: imagepick.downloadUrlImage.value,
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 1,
+                             mainAxisExtent: 160,
+                              mainAxisSpacing: 2,
+                            ),
+                            itemBuilder: (context,index) {
+                              return imagepick.downloadUrlImage.value==0?
+                               Container(
+                                decoration: BoxDecoration(
+                                    border: Border.all(width: 1),
+                                    borderRadius: BorderRadius.circular(20),
+                                    image:  DecorationImage(
+                                      image: AssetImage('lib/assets/klglff.jpg'),
+                                      fit: BoxFit.cover,
+                                    ),
+                                    ),
+                                child: const ClipRRect(
+                                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                                ),
+                              ):
+                              Container(
+                                height: 100,
+                                width: 100,
+                                 decoration: BoxDecoration(
+                                    border: Border.all(width: 1),
+                                    color: const Color.fromARGB(255, 124, 121, 121),
+                                    borderRadius: BorderRadius.circular(70),),
+                                child: Image.file(File(imagepick.listImagePath[index]),
+                               
+                                
+                                fit: BoxFit.cover,
+                                ),
+                                 
+                              );
+                             
+                            },
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
+                     Positioned(
+                          bottom: 0,
+                          right: 190,
+                           child: GestureDetector(
+                            onTap: (){
+                              imagepick.selectMultipleImage();
+                            },
+                             child: Container(
+                                     width: 34,
+                                     height: 35,
+                                     decoration: BoxDecoration(
+                                         borderRadius: BorderRadius.circular(100),
+                                         color: BlackColor.withOpacity(0.3)),
+                                     child: Icon(
+                                       Icons.add_a_photo_outlined,
+                                       color: WhiteColor,
+                                     ),
+                                   ),
+                           ),
+                         ),
+                  ],
                 ),
+
                 Hight30,
                 Row(
                   children: [
@@ -219,7 +278,7 @@ RoomDatas roomcontroller = Get.put(RoomDatas());
 //     } catch (e) {
 //       print('Error adding room: $e');
 //     }
-
+await imagepick.uploadImage(images as XFile, context);
 
                     },
                     child: const Text(
@@ -240,6 +299,23 @@ RoomDatas roomcontroller = Get.put(RoomDatas());
       ),
     );
   }
+  //  Future<void> pickImage() async {
+  //   final ImagePicker picker = ImagePicker();
+  //   final XFile? pickedFile =
+  //       await picker.pickImage(source: ImageSource.gallery);
+
+  //   if (pickedFile == null) {
+  //     return;
+  //   }
+
+  //   try {
+  //     imageurl.value = pickedFile.path;
+  //     image = pickedFile;
+  //     Get.find<AddRooms>();
+  //   } catch (e) {
+  //     log('$e');
+  //   }
+  // }
 }
 
 

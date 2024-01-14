@@ -45,6 +45,7 @@ dependencies:
   flutter_custom_clippers: ^2.1.0
   line_awesome_flutter: ^2.0.0
   flutter_slidable: ^3.0.1
+  image_picker: ^1.0.7
   
 
 dev_dependencies:

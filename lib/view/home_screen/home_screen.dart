@@ -25,13 +25,7 @@ class Home_Screen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            ClipPath(
-              clipper: WaveClipperOne(),
-              child: Container(
-                height: 50,
-                color: const Color.fromARGB(255, 124, 2, 26),
-              ),
-            ),
+         
             Expanded(
               child: Center(
                 child: ListView.separated(

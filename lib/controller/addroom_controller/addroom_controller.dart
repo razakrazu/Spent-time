@@ -1,9 +1,14 @@
+import 'dart:ui';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:spent_time/core/color.dart';
 import 'package:spent_time/model/addroom_model/model.dart';
+import 'package:spent_time/sarvice/image_upload_sarvice/image_upload_provider.dart';
 class RoomDatas extends GetxController{
    RoomDatas get instance => Get.find();
 
@@ -62,6 +67,10 @@ Future<bool>addRooms(RoomDataModel roomdata)async{
   return false;
  }
 }
+
+
+
+
 
 }
 
