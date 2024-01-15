@@ -27,13 +27,7 @@ class MyRoomsScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          ClipPath(
-            clipper: WaveClipperOne(),
-            child: Container(
-              height: 50,
-              color: const Color.fromARGB(255, 124, 2, 26),
-            ),
-          ),
+         
           Expanded(
             child: ListView.separated(
                 itemBuilder: (context, index) {

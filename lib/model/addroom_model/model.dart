@@ -1,28 +1,28 @@
-import 'package:get/get.dart';
 
 class RoomDataModel{
   final String? id;
   final String propertyname;
  final String propertyPrice;
  final String city;
-final  String  state;
+ final  String  state;
  final String pincode;
-final  String roomtype;
+ final  String roomtype;
  final String address;
  final String discription;
  final bool pool;
- final String food;
- final String wifi;
- final String powerBackup;
-final  String parking;
- final String Tv;
- final String meetingroom;
-final  String heater;
- final String ac;   
-                                                                                                                                                                                                                                                                         
+ final bool food;
+ final bool wifi;
+ final bool powerBackup;
+ final bool parking;
+ final bool Tv;
+ final bool meetingroom;
+final  bool heater;
+ final bool ac;   
+ final bool goodSefty;                                                                                                                                                                                                                                                                 
 
 
 RoomDataModel({
+ required this.goodSefty,   
   required this.heater,
   required this.Tv,
   required this.wifi,
@@ -53,7 +53,16 @@ RoomDataModel({
       'propertyPrice': propertyPrice,
       'state': state,
       'discription': discription,
-      // 'wifi':pool
+      'wifi':wifi,
+      'tv':Tv,
+    'Ac':ac,
+    'heater':heater,
+    'meetinghall':meetingroom,
+    'powerBackup':powerBackup,
+    'swimmingpool':pool,
+    'goodsefty':goodSefty,
+    'parking':parking,
+
     };
 } 
 }

@@ -1,14 +1,10 @@
-import 'dart:ui';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:spent_time/core/color.dart';
 import 'package:spent_time/model/addroom_model/model.dart';
-import 'package:spent_time/sarvice/image_upload_sarvice/image_upload_provider.dart';
 class RoomDatas extends GetxController{
    RoomDatas get instance => Get.find();
 
@@ -23,14 +19,15 @@ class RoomDatas extends GetxController{
 
 
 final wifi =false.obs;
-var food =false.obs;
+final food =false.obs;
 final Parking =false.obs;
 final ac =false.obs;
 final heater =false.obs;
 final meetingroom =false.obs;
 final powerBuckup =false.obs;
 final Tv =false.obs;
-var pool = false.obs;
+final pool = false.obs;
+final goodSefty=false.obs;
 
 var roomslist=RxList<RoomDataModel>();
 final db=FirebaseAuth.instance;
@@ -54,7 +51,8 @@ Future<bool>addRooms(RoomDataModel roomdata)async{
     'meetinghall':roomdata.meetingroom,
     'powerBackup':roomdata.powerBackup,
     'Tv':roomdata.Tv,
-    'swimmingpool':roomdata.pool,
+    'swimmingpool':pool,
+    'goodsefty':goodSefty,
 
   };
  try{
@@ -70,6 +68,7 @@ Future<bool>addRooms(RoomDataModel roomdata)async{
 
 
 
+  
 
 
 }

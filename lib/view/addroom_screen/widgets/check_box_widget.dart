@@ -4,14 +4,14 @@
 // class MyCheckBoxWidget extends StatelessWidget {
 //     MyCheckBoxWidget({
 //     super.key,
-//     required this.checkBoxTitle,
-//     required this.onTap,
-//     required this.value,
+//        required this.checkBoxTitle,
+//     required bool this.value,
+//   required ValueChanged<bool?> this.onChanged, 
     
 //   });
-// final value;
-// final onTap;
-// final checkBoxTitle;
+// final String checkBoxTitle;
+//   final value;
+//   final  onChanged;
 
 
 //   @override
@@ -19,8 +19,8 @@
 //     return Row(children: [
 //              Width10,
 //           Checkbox(
-//             value:onTap,
-//             onChanged:value ,
+//             value:value,
+//             onChanged:onChanged ,
 
     
 //           ),

@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:spent_time/core/color.dart';
-import 'package:spent_time/sarvice/image_upload_sarvice/image_upload_provider.dart';
 
 class ImageController extends GetxController{
 ImageController get instance => Get.find();
